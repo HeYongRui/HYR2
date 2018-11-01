@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.billy.android:pools-0.0.5">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3/caches/transforms-1/files-1.1/pools-0.0.5.aar/f36c224ab899f5baf751303478618bb9/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3/caches/transforms-1/files-1.1/pools-0.0.5.aar/f36c224ab899f5baf751303478618bb9/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3/caches/modules-2/files-2.1/com.billy.android/pools/0.0.5/dda93e01f965000aac141c37c5dc5ab24437492a/pools-0.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

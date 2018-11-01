@@ -1,0 +1,59 @@
+//-----------------------------------------------------------
+//
+//  demo使用的自定义cc-settings文件
+//  主要是为了演示：
+//      1. 自动注册组件B的processor
+//      2. 全局拦截器的依赖
+//
+//-----------------------------------------------------------
+
+apply from: rootProject.file('cc-settings.gradle')
+//apply from: 'https://raw.githubusercontent.com/luckybilly/CC/master/cc-settings.gradle'
+
+dependencies {
+//    implementation project(':app')
+    //2018-06-03新增：这里是为了示例添加全局拦截器
+    if (project.ext.has('runAsApp') && project.ext.runAsApp) {
+        //说明：需要兼容的情况有3种(单独组件作为app运行、打包在主app内、组件在多个app上复用但全局拦截器不同)
+        //     为了兼容以上3种情况，建议将全局拦截器作为一个单独的module，在此处给不同app添加不同拦截器module
+//        implementation project(':demo_interceptors')
+    }
+}
+//auto register extension:
+// 源码地址：https://github.com/luckybilly/AutoRegister
+// 功能介绍：
+//  在编译期扫描将打到apk包中的所有类
+//  将 scanInterface的实现类 或 scanSuperClasses的子类
+//  并在 codeInsertToClassName 类的 codeInsertToMethodName 方法中生成如下代码：
+//  codeInsertToClassName.registerMethodName(scanInterface)
+// 要点：
+//  1. codeInsertToMethodName 若未指定，则默认为static块
+//  2. codeInsertToMethodName 与 registerMethodName 需要同为static或非static
+// 自动生成的代码示例：
+/*
+  在com.billy.app_lib_interface.CategoryManager.class文件中
+  static
+  {
+    register(new CategoryA()); //scanInterface的实现类
+    register(new CategoryB()); //scanSuperClass的子类
+  }
+ */
+ccregister.registerInfo.add([
+        /*
+        * 自动注册组件配置
+        scanInterface : (必须)字符串，接口名（完整类名），所有直接实现此接口的类将会被收集
+        codeInsertToClassName : (必须)字符串，类名（完整类名），通过编译时生成代码的方式将收集到的类注册到此类的codeInsertToMethodName方法中
+        codeInsertToMethodName: 字符串，方法名，注册代码将插入到此方法中。若未指定，则默认为static块,(方法名为：)
+        registerMethodName : (必须)字符串，方法名，静态方法，方法的参数为 scanInterface
+        scanSuperClasses : 字符串或字符串数组，类名（完整类名），所有直接继承此类的子类将会被收集
+        include : 数组，需要扫描的类(正则表达式，包分隔符用/代替，如： com/billy/android/.*)，默认为所有的类
+        exclude : 数组，不需要扫描的类(正则表达式，包分隔符用/代替，如： com/billy/android/.*)，
+        * */
+        'scanInterface'           : 'testcomponent.heyongrui.com.componenta.BaseInterceptor'
+        , 'codeInsertToClassName' : 'testcomponent.heyongrui.com.componenta.ComponentA'
+        , 'codeInsertToMethodName': 'initProcessors'
+        , 'registerMethodName'    : 'add'
+])
+//也可以按照上述格式继续添加你自己的自动注册需求，俗称：搭顺风车
+
+ccregister.multiProcessEnabled = true

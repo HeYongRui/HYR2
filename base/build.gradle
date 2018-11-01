@@ -1,0 +1,84 @@
+apply plugin: 'com.android.library'
+//apply from: rootProject.file('cc-settings-demo.gradle')
+
+android {
+    compileSdkVersion rootProject.compileVersion
+    buildToolsVersion rootProject.buildVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minVersion
+        targetSdkVersion rootProject.compileVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file("C:\\findmacau.keystore")
+//            storeFile file("/Users/macbook/findmacau.keystore")
+            keyAlias "findmacau"
+            keyPassword "wubin110"
+            storePassword "wubin110"
+        }
+        debug {
+            storeFile file("C:\\findmacau.keystore")
+//            storeFile file("/Users/macbook/findmacau.keystore")
+            keyAlias "findmacau"
+            keyPassword "wubin110"
+            storePassword "wubin110"
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api "com.android.support:appcompat-v7:${rootProject.supportVersion}"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api rootProject.ext.deps.cc
+    api "com.android.support:recyclerview-v7:${rootProject.supportVersion}"
+    api 'com.squareup.okhttp3:okhttp:3.11.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api "com.squareup.retrofit2:converter-gson:2.4.0"
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.google.code.gson:gson:2.8.5'
+    api "io.reactivex.rxjava2:rxjava:2.2.2"
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    api 'com.orhanobut:logger:2.2.0'
+    api 'com.blankj:utilcode:1.20.4'
+    api 'com.android.support.constraint:constraint-layout:1.1.0'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+    api 'com.github.bumptech.glide:glide:4.8.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.8.0"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    api 'com.google.dagger:dagger:2.18'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.18'
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+}

@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="testcomponent.heyongrui.com.componentb">
+
+    <application>
+        <activity
+            android:name=".ComponentActivityB"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+    </application>
+
+</manifest>

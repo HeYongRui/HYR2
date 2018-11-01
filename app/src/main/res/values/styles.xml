@@ -1,0 +1,22 @@
+<resources>
+
+    <style name="AppWelcomeTheme" parent="android:Theme.Translucent.NoTitleBar.Fullscreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+
+    <style name="AppMainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+
+    <style name="fade" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/activity_create_zoomin</item>
+        <item name="android:windowExitAnimation">@anim/activity_create_zoomout</item>
+    </style>
+
+</resources>

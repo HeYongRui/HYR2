@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashDetailActivity">
+
+    <testcomponent.heyongrui.com.componenta.widget.PinchImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/author_iv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:src="@drawable/placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/iv"
+        app:layout_constraintStart_toStartOf="@+id/iv" />
+
+    <TextView
+        android:id="@+id/author_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@+id/author_iv"
+        app:layout_constraintEnd_toStartOf="@+id/download_iv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/author_iv"
+        app:layout_constraintTop_toTopOf="@+id/author_iv"
+        tools:text="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/download_iv"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_20"
+        android:background="@color/gray"
+        android:padding="@dimen/dp_4"
+        android:scaleType="fitCenter"
+        android:src="@drawable/download"
+        app:layout_constraintBottom_toBottomOf="@+id/author_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/author_iv" />
+
+    <testcomponent.heyongrui.com.base.widget.CircleProgressView
+        android:id="@+id/progressView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:progress="0"
+        android:visibility="gone"
+        app:cpv_innerPadding="2dp"
+        app:cpv_outerColor="@color/light_white"
+        app:cpv_outerSize="1dp"
+        app:cpv_progressNormalColor="@color/transparent"
+        app:cpv_progressReachColor="@color/light_white"
+        app:cpv_progressStyle="FillInnerArc"
+        app:layout_constraintBottom_toBottomOf="@+id/iv"
+        app:layout_constraintEnd_toEndOf="@+id/iv"
+        app:layout_constraintStart_toStartOf="@+id/iv"
+        app:layout_constraintTop_toTopOf="@+id/iv"
+        tools:visibility="visible" />
+
+</android.support.constraint.ConstraintLayout>

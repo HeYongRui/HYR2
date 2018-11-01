@@ -1,0 +1,8 @@
+repositories {
+    maven { url rootProject.file("repo-local") }
+    jcenter()
+}
+
+project.apply plugin: 'cc-register'
+def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
+project.dependencies.add(dependencyMode, "com.billy.android:cc:2.1.1")
