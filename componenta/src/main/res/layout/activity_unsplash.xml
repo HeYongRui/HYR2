@@ -5,9 +5,18 @@
     android:layout_height="match_parent"
     tools:context="testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity">
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
 </android.support.constraint.ConstraintLayout>

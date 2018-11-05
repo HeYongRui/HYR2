@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComponentA</string>
+    <string name="wechat">微信</string>
 </resources>

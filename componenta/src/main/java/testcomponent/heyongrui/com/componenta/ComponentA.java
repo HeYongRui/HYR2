@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTeaActivity;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
 
 /**
@@ -77,6 +78,9 @@ public class ComponentA implements IComponent {
             CC.sendCCResult(cc.getCallId(), CCResult.error("has not support for action:" + cc.getActionName()));
         } else if (TextUtils.equals("openUnsplash", actionName)) {
             CCUtil.navigateTo(cc, UnsplashActivity.class);
+            CC.sendCCResult(cc.getCallId(), CCResult.success());
+        } else if (TextUtils.equals("openMono", actionName)) {
+            CCUtil.navigateTo(cc, MonoTeaActivity.class);
             CC.sendCCResult(cc.getCallId(), CCResult.success());
         }
         return false;

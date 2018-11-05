@@ -18,29 +18,30 @@ import testcomponent.heyongrui.com.base.config.glide.OnProgressListener;
 public class GlideUtil {
 
     public static void load(Context context, Object resource, ImageView imageView) {
-        try {
-            RequestOptions options = new RequestOptions()
-                    .placeholder(R.drawable.placeholder)
-                    .error(R.drawable.placeholder_fail)
-                    .dontAnimate()
-                    .diskCacheStrategy(DiskCacheStrategy.NONE);
-            GlideApp.with(context).load(resource).apply(options).into(imageView);
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        }
+        RequestOptions options = new RequestOptions()
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.placeholder_fail)
+                .dontAnimate()
+                .diskCacheStrategy(DiskCacheStrategy.NONE);
+        GlideApp.with(context).load(resource).apply(options).into(imageView);
     }
 
     public static void loadCircle(Context context, Object resource, ImageView imageView) {
-        try {
-            RequestOptions options = new RequestOptions()
-                    .placeholder(R.drawable.placeholder)
-                    .error(R.drawable.placeholder_fail)
-                    .dontAnimate()
-                    .circleCrop()
-                    .diskCacheStrategy(DiskCacheStrategy.NONE);
-            GlideApp.with(context).load(resource).apply(options).into(imageView);
-        } catch (IllegalArgumentException e) {
-        }
+        RequestOptions options = new RequestOptions()
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.placeholder_fail)
+                .dontAnimate()
+                .circleCrop()
+                .diskCacheStrategy(DiskCacheStrategy.NONE);
+        GlideApp.with(context).load(resource).apply(options).into(imageView);
+    }
+
+    public static void loadGif(Context context, Object resource, ImageView imageView) {
+        RequestOptions options = new RequestOptions()
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.placeholder_fail)
+                .diskCacheStrategy(DiskCacheStrategy.NONE);
+        GlideApp.with(context).asGif().load(resource).apply(options).into(imageView);
     }
 
     public static void loadWithProgress(Object resource, ImageView imageView, OnProgressListener onProgressListener) {

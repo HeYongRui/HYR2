@@ -7,22 +7,28 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
+import okhttp3.ResponseBody;
 import testcomponent.heyongrui.com.base.base.BaseActivity;
+import testcomponent.heyongrui.com.base.network.configure.ResponseDisposable;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.Divider;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.DividerBuilder;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.RecycleViewItemDecoration;
 import testcomponent.heyongrui.com.componenta.R;
 import testcomponent.heyongrui.com.componenta.net.dto.UnsplashPicDto;
+import testcomponent.heyongrui.com.componenta.net.service.QingMangService;
 import testcomponent.heyongrui.com.componenta.net.service.UnsplashService;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.adapter.UnsplashAdapter;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.adapter.UnsplashMultipleItem;
@@ -34,9 +40,13 @@ import testcomponent.heyongrui.com.componenta.ui.unsplash.adapter.UnsplashMultip
 public class UnsplashActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
+    private TextView tv;
 
     @Inject
     UnsplashService unsplashService;
+
+    @Inject
+    QingMangService qingMangService;
 
     private int page = 1;
     private int per_page = 10;
@@ -56,7 +66,9 @@ public class UnsplashActivity extends BaseActivity {
     @Override
     public void init(Bundle savedInstanceState) {
         recyclerView = findViewById(R.id.recyclerView);
+        tv = findViewById(R.id.tv);
         initRecyclerView();
+        getQingMang();
         getUnsplashPics();
     }
 
@@ -95,6 +107,27 @@ public class UnsplashActivity extends BaseActivity {
             UnsplashDetailActivity.launchActivity(UnsplashActivity.this, unsplashPicDto,
                     screenLocationS[1], screenLocationS[0], iv.getWidth(), iv.getHeight());
         });
+    }
+
+    private void getQingMang() {
+        mRxManager.add(new QingMangService().getQingMang("2.0.3", "0214084828574de8b60c1197f30b2e34d38295fb", 94)
+                .subscribeWith(new ResponseDisposable<ResponseBody>(this) {
+                    @Override
+                    protected void onSuccess(ResponseBody responseBody) {
+                        try {
+                            String string = responseBody.string();
+                            tv.setText(string);
+                            LogUtils.e(string);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    protected void onFailure(int errorCode, String errorMsg) {
+
+                    }
+                }));
     }
 
     private void getUnsplashPics() {

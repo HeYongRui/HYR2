@@ -101,8 +101,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         });
                 break;
             case R.id.btn2:
+//                CC.obtainBuilder("ComponentA")
+//                        .setActionName("openUnsplash")
+//                        .build()
+//                        .call();
                 CC.obtainBuilder("ComponentA")
-                        .setActionName("openUnsplash")
+                        .setActionName("openMono")
                         .build()
                         .call();
                 break;

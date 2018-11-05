@@ -18,6 +18,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/BaseAppTheme" />
         <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTeaActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullscreen" />
