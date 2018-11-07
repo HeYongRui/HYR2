@@ -11,7 +11,416 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c003622f-d5f2-4e6b-a492-4519c5af3931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/fileChanges/last-build.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars___D__demo_TestComponent_componenta_libs_tbs_sdk_thirdapp_v3_6_0_1352_43618_sharewithdownload_withoutGame_obfs_20180918_120327_jar_unspecified_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_android_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_core_common_1_1_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_common_1_1_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_asynclayoutinflater_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_collections_28_0_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_1_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_coordinatorlayout_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cursoradapter_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_customview_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_documentfile_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_drawerlayout_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_interpolator_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_loader_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_localbroadcastmanager_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_print_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_slidingpanelayout_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_28_0_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_swiperefreshlayout_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_monitor_1_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_versionedparcelable_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_viewpager_28_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_billy_android_cc_2_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_billy_android_pools_0_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_blankj_utilcode_1_20_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_42.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_bumptech_glide_annotations_4_8_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_bumptech_glide_disklrucache_4_8_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_bumptech_glide_gifdecoder_4_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_bumptech_glide_glide_4_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_bumptech_glide_okhttp3_integration_4_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_tbruyelle_rxpermissions_0_10_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_5_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_dagger_dagger_2_18_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_orhanobut_logger_2_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_javawriter_2_1_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_logging_interceptor_3_11_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_okhttp_3_11_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okio_okio_1_14_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_adapter_rxjava2_2_4_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_converter_gson_2_4_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_retrofit_2_4_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxjava2_rxandroid_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxjava2_rxjava_2_2_2_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject_javax_inject_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/net_sf_kxml_kxml2_2_3_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_core_1_3_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_integration_1_3_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_library_1_3_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_reactivestreams_reactive_streams_1_0_2_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestComponent.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/heyongrui/testcomponent/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/fonts/HYQinChuanFeiYing.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/heyongrui/testcomponent/AppContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/heyongrui/testcomponent/DownloadAdService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/heyongrui/testcomponent/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/heyongrui/testcomponent/WelcomeActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/anim/activity_create_zoomin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/anim/activity_create_zoomout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/app_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/welcomimg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/test/java/com/heyongrui/testcomponent/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/base.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/androidTest/java/testcomponent/heyongrui/com/base/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/BaseApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/Global.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/JsonFormat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BasePresenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/RxManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/config/glide/BaseAppGlideModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/config/glide/GlideImageLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/config/glide/OnProgressListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/config/glide/ProgressManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/config/glide/ProgressResponseBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/annotation/ActivityContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/annotation/AppScope.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/annotation/ApplicationContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/annotation/PerActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/component/ActivityComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/component/BaseAppComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/module/ActivityModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/injection/module/BaseAppModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/configure/FactoryException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/configure/HttpCache.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/configure/ResponseDisposable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/configure/RxHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/configure/TrustManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/core/CodeException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/core/CoreApiException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/core/CoreHeader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/core/CoreHttpRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/core/CoreResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/interceptor/CacheInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/interceptor/HeaderInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/interceptor/HttpLogInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/interceptor/HttpLogger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/interceptor/TokenInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/network/service/ApiService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/CoreUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/DrawableUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/FileUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/GlideUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/SpanUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/StringUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/TimeUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/UiUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/CircleProgressView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/CoffeeView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/cardswipelayout/CardConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/cardswipelayout/CardItemTouchHelperCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/cardswipelayout/CardLayoutManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/cardswipelayout/OnSwipeListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/catloadingview/CatLoadingView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/catloadingview/EyelidView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/catloadingview/GraduallyTextView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/itemdecoration/BaseItemDecoration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/itemdecoration/Divider.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/itemdecoration/DividerBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/itemdecoration/RecycleViewItemDecoration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/itemdecoration/SideLine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/itemdecoration/SpacesItemDecoration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/numberruntextview/BigDecimalEvaluator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/numberruntextview/EditTextWithClear.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/numberruntextview/NumberRunningTextView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/LevenshteinUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/TickerCharacterList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/TickerColumn.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/TickerColumnManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/TickerDrawMetrics.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/TickerUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/tickerview/TickerView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/anim/anim_bottom_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/anim/anim_bottom_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/drawable-hdpi/cat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/drawable-hdpi/eyes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/drawable-hdpi/mouse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/drawable-xhdpi/placeholder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/drawable-xhdpi/placeholder_fail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/drawable/bg_cat_loading.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/layout/dialog_catloading.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/values/attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/test/java/testcomponent/heyongrui/com/base/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cc-settings-demo.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cc-settings.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/componenta.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/libs/tbs_sdk_thirdapp_v3.6.0.1352_43618_sharewithdownload_withoutGame_obfs_20180918_120327.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/androidTest/java/testcomponent/heyongrui/com/componenta/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/assets/fonts/hanyizhuzi.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/java/debug/MyApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-hdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-hdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-mdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-mdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-xhdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-xhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-xxhdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-xxhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-xxxhdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/mipmap-xxxhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/values-zh-rCN/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/debug/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/BaseInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ComponentA.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ComponentActivityA.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/CustomIDynamicComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/LoginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/LoginInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/TestInjectDto.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/configure/KeyManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/contract/TestContract.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/injection/component/ComponentAActivityComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/injection/module/ComponentAActivityModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/api/MonoApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/api/QingMangApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/api/UnsplashApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/dto/MonoTeaDto.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/dto/UnsplashPicDto.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/service/MonoSerevice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/service/QingMangService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/service/UnsplashService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/presenter/TestPresenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/adapter/MonoAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/adapter/MonoMultipleItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/MonoH5Activity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/MonoTeaActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/X5WebViewFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/adapter/UnsplashAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/adapter/UnsplashMultipleItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/contract/UnsplashContract.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/presenter/UnsplashPresenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/view/UnsplashActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/view/UnsplashDetailActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/PinchImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/GridImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/ItemImageClickListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/ItemImageLongClickListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/NineGridView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/NineGridViewAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/x5webview/X5WebChromeClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/x5webview/X5WebView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/jniLibs/armeabi/liblbs.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/anim/slide_down_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/anim/slide_down_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/forward.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_mono_h5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_mono_tea.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_unsplash.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_unsplash_detail.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/adapter_item_monotea_one.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/adapter_item_monotea_two.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/adapter_item_unsplash_list.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/fragment_x5_webview.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/header_monotea.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/layout_coffeeview.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/values/attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componenta/src/test/java/testcomponent/heyongrui/com/componenta/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/componentb.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/androidTest/java/testcomponent/heyongrui/com/componentb/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/java/debug/MyApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-hdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-hdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-mdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-mdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-xhdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-xhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-xxhdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-xxhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-xxxhdpi/demo_a_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/mipmap-xxxhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/values-zh-rCN/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/debug/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/java/testcomponent/heyongrui/com/componentb/ComponentActivityB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/java/testcomponent/heyongrui/com/componentb/ComponentB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/java/testcomponent/heyongrui/com/componentb/IDynamicComponentManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/componentb/src/test/java/testcomponent/heyongrui/com/componentb/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/interceptor.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/src/androidTest/java/testcomponent/heyongrui/com/interceptor/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/src/main/java/testcomponent/heyongrui/com/interceptor/CustomGlobalInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/src/main/java/testcomponent/heyongrui/com/interceptor/CustomICCInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interceptor/src/test/java/testcomponent/heyongrui/com/interceptor/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/local.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/androidTest/java/testcomponent/heyongrui/com/user/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/java/debug/MyApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-hdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-hdpi/demo_user_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-mdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-mdpi/demo_user_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-xhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-xhdpi/demo_user_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-xxhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-xxhdpi/demo_user_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-xxxhdpi/demo_a_ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/mipmap-xxxhdpi/demo_user_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/values-zh-rCN/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/debug/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/java/testcomponent/heyongrui/com/user/LoginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/java/testcomponent/heyongrui/com/user/UserComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/drawable/ic_launcher_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/layout/activity_login.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/src/test/java/testcomponent/heyongrui/com/user/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/user.iml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -6929,7 +7338,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129063" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560345958" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -6977,7 +7386,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129063" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560345958" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -7022,27 +7431,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -7197,7 +7585,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560345959" />
       </method>
     </configuration>
     <configuration default="false" name="componenta" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -7246,7 +7634,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560345959" />
       </method>
     </configuration>
     <configuration default="false" name="componentb" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -7295,7 +7683,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560345959" />
       </method>
     </configuration>
     <configuration default="false" name="user" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -7344,7 +7732,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560345959" />
       </method>
     </configuration>
     <list size="4">
@@ -7440,6 +7828,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8662207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -7460,7 +7849,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8729977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8729977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.51492536" order="7" side_tool="true" content_ui="tabs" />
@@ -7472,11 +7861,41 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5039019" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Flutter Inspector" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8662207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5039019" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.895881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39816934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.48507464" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8729977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.51492536" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4960981" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5039019" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
