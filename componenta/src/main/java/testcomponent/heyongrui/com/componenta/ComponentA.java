@@ -3,11 +3,13 @@ package testcomponent.heyongrui.com.componenta;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.billy.cc.core.component.CC;
 import com.billy.cc.core.component.CCResult;
 import com.billy.cc.core.component.CCUtil;
 import com.billy.cc.core.component.IComponent;
+import com.tencent.smtt.sdk.QbSdk;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -25,6 +27,23 @@ public class ComponentA implements IComponent {
 
     private AtomicBoolean initialized = new AtomicBoolean(false);
     private final HashMap<String, BaseInterceptor> map = new HashMap<>();
+
+    public ComponentA() {//无参构造方法
+        //作为组件时的初始化操作，只会执行一次(类似在Application中初始化)
+        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
+            @Override
+            public void onViewInitFinished(boolean arg0) {
+                //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
+                Log.d("X5", " onViewInitFinished is " + arg0);
+            }
+
+            @Override
+            public void onCoreInitFinished() {
+            }
+        };
+        //x5内核初始化接口
+        QbSdk.initX5Environment(CC.getApplication(), cb);
+    }
 
     private void initProcessors() {
     }

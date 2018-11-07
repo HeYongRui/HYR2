@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testcomponent.heyongrui.com.base.widget.CoffeeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coffeeview"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="20dp"
+    app:coasterColor="#72c7c8"
+    app:cupColor="#42b6b7"
+    app:vaporColor="#bbc8c8" />

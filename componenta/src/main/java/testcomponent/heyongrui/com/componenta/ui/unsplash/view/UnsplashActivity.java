@@ -59,7 +59,7 @@ public class UnsplashActivity extends BaseActivity {
     }
 
     @Override
-    public int getContentViewLayoutId() {
+    public int getLayoutId() {
         return R.layout.activity_unsplash;
     }
 

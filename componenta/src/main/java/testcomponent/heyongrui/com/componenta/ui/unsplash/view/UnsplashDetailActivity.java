@@ -84,7 +84,7 @@ public class UnsplashDetailActivity extends BaseActivity implements View.OnClick
     }
 
     @Override
-    public int getContentViewLayoutId() {
+    public int getLayoutId() {
         return R.layout.activity_unsplash_detail;
     }
 

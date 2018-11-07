@@ -38,6 +38,7 @@ public class MonoTeaDto implements Parcelable {
         private String sub_title;
         private String bg_img_url;
         private String intro;
+        private String read_time;
         private List<EntityListBean> entity_list;
 
         public String getRelease_date() {
@@ -88,6 +89,14 @@ public class MonoTeaDto implements Parcelable {
             this.intro = intro;
         }
 
+        public String getRead_time() {
+            return read_time;
+        }
+
+        public void setRead_time(String read_time) {
+            this.read_time = read_time;
+        }
+
         public List<EntityListBean> getEntity_list() {
             return entity_list;
         }
@@ -109,6 +118,7 @@ public class MonoTeaDto implements Parcelable {
             dest.writeString(this.sub_title);
             dest.writeString(this.bg_img_url);
             dest.writeString(this.intro);
+            dest.writeString(this.read_time);
             dest.writeTypedList(this.entity_list);
         }
 
@@ -122,6 +132,7 @@ public class MonoTeaDto implements Parcelable {
             this.sub_title = in.readString();
             this.bg_img_url = in.readString();
             this.intro = in.readString();
+            this.read_time = in.readString();
             this.entity_list = in.createTypedArrayList(EntityListBean.CREATOR);
         }
 
@@ -160,6 +171,7 @@ public class MonoTeaDto implements Parcelable {
             private String description;
             private String rec_url;
             private List<ThumbBean> pics;
+            private List<ThumbBean> images;
 
             public GroupBean getGroup() {
                 return group;
@@ -225,6 +237,14 @@ public class MonoTeaDto implements Parcelable {
                 this.pics = pics;
             }
 
+            public List<ThumbBean> getImages() {
+                return images;
+            }
+
+            public void setImages(List<ThumbBean> images) {
+                this.images = images;
+            }
+
             public static class GroupBean implements Parcelable {
 
                 private MasterInfoBean master_info;
@@ -233,6 +253,7 @@ public class MonoTeaDto implements Parcelable {
                 private String description;
                 private String slogan;
                 private String name;
+                private String category;
 
                 public MasterInfoBean getMaster_info() {
                     return master_info;
@@ -280,6 +301,14 @@ public class MonoTeaDto implements Parcelable {
 
                 public void setName(String name) {
                     this.name = name;
+                }
+
+                public String getCategory() {
+                    return category;
+                }
+
+                public void setCategory(String category) {
+                    this.category = category;
                 }
 
                 public static class MasterInfoBean implements Parcelable {
@@ -347,6 +376,7 @@ public class MonoTeaDto implements Parcelable {
                     dest.writeString(this.description);
                     dest.writeString(this.slogan);
                     dest.writeString(this.name);
+                    dest.writeString(this.category);
                 }
 
                 public GroupBean() {
@@ -359,6 +389,7 @@ public class MonoTeaDto implements Parcelable {
                     this.description = in.readString();
                     this.slogan = in.readString();
                     this.name = in.readString();
+                    this.category = in.readString();
                 }
 
                 public static final Parcelable.Creator<GroupBean> CREATOR = new Parcelable.Creator<GroupBean>() {
@@ -541,6 +572,7 @@ public class MonoTeaDto implements Parcelable {
                 dest.writeString(this.description);
                 dest.writeString(this.rec_url);
                 dest.writeTypedList(this.pics);
+                dest.writeTypedList(this.images);
             }
 
             protected MeowBean(Parcel in) {
@@ -552,6 +584,7 @@ public class MonoTeaDto implements Parcelable {
                 this.description = in.readString();
                 this.rec_url = in.readString();
                 this.pics = in.createTypedArrayList(ThumbBean.CREATOR);
+                this.images = in.createTypedArrayList(ThumbBean.CREATOR);
             }
 
             public static final Creator<MeowBean> CREATOR = new Creator<MeowBean>() {

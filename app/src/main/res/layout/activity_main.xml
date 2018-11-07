@@ -62,12 +62,20 @@
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试动态组件"
+        android:text="MoNO"
         app:layout_constraintBottom_toTopOf="@+id/tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn1"
         app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UnSplash"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/btn2" />
 
     <TextView
         android:id="@+id/tv"

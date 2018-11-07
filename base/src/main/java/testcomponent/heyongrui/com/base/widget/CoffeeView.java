@@ -3,7 +3,6 @@ package testcomponent.heyongrui.com.base.widget;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -14,7 +13,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
@@ -69,13 +67,6 @@ public class CoffeeView extends View {
     public CoffeeView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        parseAttrs(attrs);
-        init();
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public CoffeeView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
         parseAttrs(attrs);
         init();
     }

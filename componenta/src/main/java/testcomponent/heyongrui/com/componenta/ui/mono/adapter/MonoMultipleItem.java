@@ -11,12 +11,18 @@ import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 public class MonoMultipleItem implements MultiItemEntity {
 
     public static final int TYPE_ONE = 10001;
+    public static final int TYPE_TWO = 10002;
 
-    public static final int IMG_SPAN_SIZE = 1;
+    public static final int SPAN_SIZE_ONE = 1;
 
     private int itemType;
     private int spanSize;
     private MonoTeaDto.EntityListBean entityListBean;
+
+    public MonoMultipleItem(int itemType, MonoTeaDto.EntityListBean entityListBean) {
+        this.itemType = itemType;
+        this.entityListBean = entityListBean;
+    }
 
     public MonoMultipleItem(int itemType, int spanSize, MonoTeaDto.EntityListBean entityListBean) {
         this.itemType = itemType;
