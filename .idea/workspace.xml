@@ -10,62 +10,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c003622f-d5f2-4e6b-a492-4519c5af3931" name="Default" comment="加入X5、完善优化MONO早茶页面">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/libs/tbs_sdk_thirdapp_v3.6.0.1352_43618_sharewithdownload_withoutGame_obfs_20180918_120327.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/jniLibs/armeabi/liblbs.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/drawable-xhdpi/forward.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/__local_aars___D__demo_TestComponent_componenta_libs_tbs_sdk_thirdapp_v3_6_0_1352_43618_sharewithdownload_withoutGame_obfs_20180918_120327_jar_unspecified_jar.xml" />
+    <list default="true" id="c003622f-d5f2-4e6b-a492-4519c5af3931" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/X5WebViewFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/GridImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/ItemImageClickListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/ItemImageLongClickListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/NineGridView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/ninegridimageview/NineGridViewAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/x5webview/X5WebChromeClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/widget/x5webview/X5WebView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_mono_h5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/adapter_item_monotea_two.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/fragment_x5_webview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/layout_coffeeview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/componenta/src/main/res/values/attrs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/heyongrui/testcomponent/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/heyongrui/testcomponent/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseActivity.java" afterPath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseFragment.java" afterPath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/base/BaseFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/TimeUtil.java" afterPath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/util/TimeUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/CoffeeView.java" afterPath="$PROJECT_DIR$/base/src/main/java/testcomponent/heyongrui/com/base/widget/CoffeeView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/build.gradle" afterPath="$PROJECT_DIR$/componenta/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/componenta.iml" afterPath="$PROJECT_DIR$/componenta/componenta.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/componenta/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/debug/java/debug/MyApp.java" afterPath="$PROJECT_DIR$/componenta/src/main/debug/java/debug/MyApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ComponentA.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ComponentA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/dto/MonoTeaDto.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/net/dto/MonoTeaDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/adapter/MonoAdapter.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/adapter/MonoAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/adapter/MonoMultipleItem.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/adapter/MonoMultipleItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/MonoH5Activity.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/MonoH5Activity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/MonoTeaActivity.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/mono/view/MonoTeaActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/view/UnsplashActivity.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/view/UnsplashActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/view/UnsplashDetailActivity.java" afterPath="$PROJECT_DIR$/componenta/src/main/java/testcomponent/heyongrui/com/componenta/ui/unsplash/view/UnsplashDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_unsplash_detail.xml" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/activity_unsplash_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/header_monotea.xml" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/header_monotea.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/componenta/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/componenta/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/componenta/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/user.iml" afterPath="$PROJECT_DIR$/user/user.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/componenta/src/main/res/layout/adapter_item_monotea_list.xml" afterPath="$PROJECT_DIR$/componenta/src/main/res/layout/adapter_item_monotea_one.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -6983,7 +6929,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560112312" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129063" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -7031,7 +6977,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560112312" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129063" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -7251,7 +7197,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560112313" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
       </method>
     </configuration>
     <configuration default="false" name="componenta" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -7300,7 +7246,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560112313" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
       </method>
     </configuration>
     <configuration default="false" name="componentb" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -7349,7 +7295,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560112313" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
       </method>
     </configuration>
     <configuration default="false" name="user" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -7398,7 +7344,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560112313" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1541560129064" />
       </method>
     </configuration>
     <list size="4">
@@ -7482,7 +7428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541412181193</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="加入X5、完善优化MONO早茶页面">
+      <created>1541560125736</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541560125736</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -7561,7 +7514,8 @@
     </ignored-roots>
     <MESSAGE value="init commit" />
     <MESSAGE value="仿写MoNo、轻芒" />
-    <option name="LAST_COMMIT_MESSAGE" value="仿写MoNo、轻芒" />
+    <MESSAGE value="加入X5、完善优化MONO早茶页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入X5、完善优化MONO早茶页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
