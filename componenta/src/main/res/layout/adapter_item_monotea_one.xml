@@ -25,18 +25,19 @@
         android:textSize="@dimen/sp_14"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="@+id/avatar_iv"
-        app:layout_constraintEnd_toStartOf="@+id/wx_link_tv"
+        app:layout_constraintEnd_toStartOf="@+id/category_tv"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@+id/avatar_iv"
         app:layout_constraintTop_toTopOf="@+id/avatar_iv" />
 
     <TextView
-        android:id="@+id/wx_link_tv"
+        android:id="@+id/category_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_10"
-        android:text="@string/wechat"
-        android:textColor="#FF5B9CE6"
+        android:padding="@dimen/dp_4"
+        android:text="分类"
+        android:textColor="@color/colorCyan"
         android:textSize="@dimen/sp_14"
         app:layout_constraintBottom_toBottomOf="@+id/avatar_iv"
         app:layout_constraintEnd_toEndOf="parent"

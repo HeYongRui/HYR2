@@ -10,5 +10,5 @@ import java.util.List;
  */
 
 public interface ItemImageClickListener<T> {
-    void onItemImageClick(Context context, ImageView imageView, int index, List<T> list);
+    void onItemImageClick(Context context, BaseNineGridLayout<T> baseNineGridLayout, ImageView imageView, int index, T t, List<T> list);
 }

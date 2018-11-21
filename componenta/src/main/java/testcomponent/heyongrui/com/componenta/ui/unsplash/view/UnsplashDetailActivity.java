@@ -15,6 +15,7 @@ import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
@@ -149,12 +150,13 @@ public class UnsplashDetailActivity extends BaseActivity implements View.OnClick
             String fileName = extractFileName(full_url);//提取文件名
             File saveFile = getSaveFile(fileName);//判断文件是否已存在
             OnProgressListener onProgressListener = (isComplete, percentage, bytesRead, totalBytes) -> {
-                if (isComplete) {
+                if (isComplete || totalBytes == -1) {
                     circleProgressView.setVisibility(View.GONE);
                 } else {
                     circleProgressView.setVisibility(View.VISIBLE);
                     circleProgressView.setProgress(percentage);
                 }
+                Log.d("UnsplashDetailActivity", "progress: " + percentage + "\tbytesRead: " + bytesRead + "\ttotalBytes: " + totalBytes);
             };
             if (saveFile.exists()) {
                 GlideUtil.loadWithProgress(saveFile, imageView, onProgressListener);

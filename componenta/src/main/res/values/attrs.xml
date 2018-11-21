@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="NineGridView">
-        <attr name="singleImgSize" format="dimension" />
-        <attr name="imgGap" format="dimension" />
-        <attr name="maxSize" format="integer" />
-        <attr name="showStyle" format="enum">
-            <enum name="grid" value="0" />
-            <enum name="fill" value="1" />
-        </attr>
+    <declare-styleable name="RatioImageView">
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="NineGridLayout">
+        <attr name="sapcing" format="dimension" />
+        <attr name="maxCount" format="integer" />
     </declare-styleable>
 </resources>

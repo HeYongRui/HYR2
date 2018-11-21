@@ -2,6 +2,7 @@ package testcomponent.heyongrui.com.componenta.ui.mono.adapter;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
+import testcomponent.heyongrui.com.componenta.net.dto.MonoCategoryDto;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 
 /**
@@ -12,16 +13,23 @@ public class MonoMultipleItem implements MultiItemEntity {
 
     public static final int TYPE_ONE = 10001;
     public static final int TYPE_TWO = 10002;
+    public static final int TYPE_CATEGORY = 10003;
 
     public static final int SPAN_SIZE_ONE = 1;
 
     private int itemType;
     private int spanSize;
     private MonoTeaDto.EntityListBean entityListBean;
+    private MonoCategoryDto.MeowsBean meowsBean;
 
     public MonoMultipleItem(int itemType, MonoTeaDto.EntityListBean entityListBean) {
         this.itemType = itemType;
         this.entityListBean = entityListBean;
+    }
+
+    public MonoMultipleItem(int itemType, MonoCategoryDto.MeowsBean meowsBean) {
+        this.itemType = itemType;
+        this.meowsBean = meowsBean;
     }
 
     public MonoMultipleItem(int itemType, int spanSize, MonoTeaDto.EntityListBean entityListBean) {
@@ -53,5 +61,13 @@ public class MonoMultipleItem implements MultiItemEntity {
 
     public void setEntityListBean(MonoTeaDto.EntityListBean entityListBean) {
         this.entityListBean = entityListBean;
+    }
+
+    public MonoCategoryDto.MeowsBean getMeowsBean() {
+        return meowsBean;
+    }
+
+    public void setMeowsBean(MonoCategoryDto.MeowsBean meowsBean) {
+        this.meowsBean = meowsBean;
     }
 }

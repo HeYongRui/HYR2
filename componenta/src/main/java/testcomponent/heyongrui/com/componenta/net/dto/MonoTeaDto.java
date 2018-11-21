@@ -254,6 +254,7 @@ public class MonoTeaDto implements Parcelable {
                 private String slogan;
                 private String name;
                 private String category;
+                private int category_id;
 
                 public MasterInfoBean getMaster_info() {
                     return master_info;
@@ -309,6 +310,14 @@ public class MonoTeaDto implements Parcelable {
 
                 public void setCategory(String category) {
                     this.category = category;
+                }
+
+                public int getCategory_id() {
+                    return category_id;
+                }
+
+                public void setCategory_id(int category_id) {
+                    this.category_id = category_id;
                 }
 
                 public static class MasterInfoBean implements Parcelable {
@@ -377,6 +386,7 @@ public class MonoTeaDto implements Parcelable {
                     dest.writeString(this.slogan);
                     dest.writeString(this.name);
                     dest.writeString(this.category);
+                    dest.writeInt(this.category_id);
                 }
 
                 public GroupBean() {
@@ -390,6 +400,7 @@ public class MonoTeaDto implements Parcelable {
                     this.slogan = in.readString();
                     this.name = in.readString();
                     this.category = in.readString();
+                    this.category_id = in.readInt();
                 }
 
                 public static final Parcelable.Creator<GroupBean> CREATOR = new Parcelable.Creator<GroupBean>() {

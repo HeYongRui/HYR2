@@ -1,8 +1,10 @@
 package testcomponent.heyongrui.com.componenta.ui.mono.adapter;
 
-import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,19 +15,23 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
 
+import testcomponent.heyongrui.com.base.util.DrawableUtil;
 import testcomponent.heyongrui.com.base.util.GlideUtil;
 import testcomponent.heyongrui.com.base.util.UiUtil;
 import testcomponent.heyongrui.com.componenta.R;
+import testcomponent.heyongrui.com.componenta.net.dto.MonoCategoryDto;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
-import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.GridImageView;
-import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.NineGridView;
-import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.NineGridViewAdapter;
+import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.ItemImageClickListener;
+import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.NineGridLayout;
 
 /**
  * Created by lambert on 2018/11/5.
  */
 
 public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, BaseViewHolder> {
+
+    private ItemImageClickListener<MonoTeaDto.EntityListBean.MeowBean.ThumbBean> mItemImageClickListener;
+
     /**
      * Same as QuickAdapter#QuickAdapter(Context,int) but with
      * some initialization data.
@@ -36,31 +42,36 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
         super(data);
         addItemType(MonoMultipleItem.TYPE_ONE, R.layout.adapter_item_monotea_one);
         addItemType(MonoMultipleItem.TYPE_TWO, R.layout.adapter_item_monotea_two);
+        addItemType(MonoMultipleItem.TYPE_CATEGORY, R.layout.adapter_item_monocategory);
     }
 
     @Override
     protected void convert(BaseViewHolder helper, MonoMultipleItem item) {
         UiUtil.setOnclickFeedBack(mContext, R.color.white, R.color.gray, helper.itemView);
-        MonoTeaDto.EntityListBean entityListBean = item.getEntityListBean();
-        if (entityListBean == null) return;
-        MonoTeaDto.EntityListBean.MeowBean meow = entityListBean.getMeow();
-        if (meow == null) return;
-        MonoTeaDto.EntityListBean.MeowBean.GroupBean group = meow.getGroup();
         switch (helper.getItemViewType()) {
             case MonoMultipleItem.TYPE_ONE:
                 ImageView oneAvatarIv = helper.getView(R.id.avatar_iv);
                 TextView oneNameTv = helper.getView(R.id.name_tv);
-                TextView oneWxLinkTv = helper.getView(R.id.wx_link_tv);
+                TextView oneCategoryTv = helper.getView(R.id.category_tv);
+                helper.addOnClickListener(R.id.category_tv);
                 ImageView oneThumbIv = helper.getView(R.id.thumb_iv);
                 TextView oneTextTv = helper.getView(R.id.text_tv);
                 TextView oneTitleTv = helper.getView(R.id.title_tv);
                 TextView oneSubTitleTv = helper.getView(R.id.sub_title_tv);
-                if (group != null) {
-                    GlideUtil.load(mContext, group.getLogo_url(), oneAvatarIv);
-                    oneNameTv.setText(group.getName());
-                    oneWxLinkTv.setText(group.getCategory());
+                MonoTeaDto.EntityListBean oneEntityListBean = item.getEntityListBean();
+                if (oneEntityListBean == null) return;
+                MonoTeaDto.EntityListBean.MeowBean oneMeow = oneEntityListBean.getMeow();
+                if (oneMeow == null) return;
+                MonoTeaDto.EntityListBean.MeowBean.GroupBean oneGroup = oneMeow.getGroup();
+                if (oneGroup != null) {
+                    GlideUtil.load(mContext, oneGroup.getLogo_url(), oneAvatarIv);
+                    oneNameTv.setText(oneGroup.getName());
+                    oneCategoryTv.setText(oneGroup.getCategory());
+                    oneCategoryTv.setTextColor(UiUtil.createTextColorStateList(ContextCompat.getColor(mContext, R.color.colorCyan),
+                            ContextCompat.getColor(mContext, R.color.colorPrimaryDark),
+                            ContextCompat.getColor(mContext, R.color.colorCyan)));
                 }
-                MonoTeaDto.EntityListBean.MeowBean.ThumbBean thumb = meow.getThumb();
+                MonoTeaDto.EntityListBean.MeowBean.ThumbBean thumb = oneMeow.getThumb();
                 if (thumb != null) {
                     String raw = thumb.getRaw();
                     float aspectRatio = (float) thumb.getWidth() / thumb.getHeight();
@@ -75,21 +86,21 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
                         GlideUtil.load(mContext, raw, oneThumbIv);
                     }
                 }
-                String oneText = meow.getText();
+                String oneText = oneMeow.getText();
                 if (TextUtils.isEmpty(oneText)) {
                     oneTextTv.setVisibility(View.GONE);
                 } else {
                     oneTextTv.setText("“" + oneText + "”");
                     oneTextTv.setVisibility(View.VISIBLE);
                 }
-                String oneTitle = meow.getTitle();
+                String oneTitle = oneMeow.getTitle();
                 if (TextUtils.isEmpty(oneTitle)) {
                     oneTitleTv.setVisibility(View.GONE);
                 } else {
                     oneTitleTv.setText(oneTitle);
                     oneTitleTv.setVisibility(View.VISIBLE);
                 }
-                String description = meow.getDescription();
+                String description = oneMeow.getDescription();
                 if (TextUtils.isEmpty(description)) {
                     oneSubTitleTv.setVisibility(View.GONE);
                 } else {
@@ -100,60 +111,101 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
             case MonoMultipleItem.TYPE_TWO:
                 ImageView twoAvatarIv = helper.getView(R.id.avatar_iv);
                 TextView twoNameTv = helper.getView(R.id.name_tv);
-                TextView twoWxLinkTv = helper.getView(R.id.wx_link_tv);
+                TextView twoCategoryTv = helper.getView(R.id.category_tv);
+                helper.addOnClickListener(R.id.category_tv);
                 TextView twoTitleTv = helper.getView(R.id.title_tv);
                 TextView twoTextTv = helper.getView(R.id.text_tv);
-                NineGridView twoNinegridview = helper.getView(R.id.ninegridview);
+                NineGridLayout twoNinegridview = helper.getView(R.id.ninegridview);
 
-                String twoTitle = meow.getTitle();
+                MonoTeaDto.EntityListBean twoEntityListBean = item.getEntityListBean();
+                if (twoEntityListBean == null) return;
+                MonoTeaDto.EntityListBean.MeowBean twoMeow = twoEntityListBean.getMeow();
+                if (twoMeow == null) return;
+                MonoTeaDto.EntityListBean.MeowBean.GroupBean twoGroup = twoMeow.getGroup();
+                String twoTitle = twoMeow.getTitle();
                 if (TextUtils.isEmpty(twoTitle)) {
                     twoTitleTv.setVisibility(View.GONE);
                 } else {
                     twoTitleTv.setText(twoTitle);
                     twoTitleTv.setVisibility(View.VISIBLE);
                 }
-                String twoText = meow.getText();
+                String twoText = twoMeow.getText();
                 if (TextUtils.isEmpty(twoText)) {
                     twoTextTv.setVisibility(View.GONE);
                 } else {
                     twoTextTv.setText(twoText);
                     twoTextTv.setVisibility(View.VISIBLE);
                 }
-                if (group != null) {
-                    GlideUtil.load(mContext, group.getLogo_url(), twoAvatarIv);
-                    twoNameTv.setText(group.getName());
-                    twoWxLinkTv.setText(group.getCategory());
+                if (twoGroup != null) {
+                    GlideUtil.load(mContext, twoGroup.getLogo_url(), twoAvatarIv);
+                    twoNameTv.setText(twoGroup.getName());
+                    twoCategoryTv.setText(twoGroup.getCategory());
+                    twoCategoryTv.setTextColor(UiUtil.createTextColorStateList(ContextCompat.getColor(mContext, R.color.colorCyan),
+                            ContextCompat.getColor(mContext, R.color.colorPrimaryDark),
+                            ContextCompat.getColor(mContext, R.color.colorCyan)));
                 }
-                List<MonoTeaDto.EntityListBean.MeowBean.ThumbBean> pics = meow.getPics();
+                List<MonoTeaDto.EntityListBean.MeowBean.ThumbBean> pics = twoMeow.getPics();
                 if (pics != null && !pics.isEmpty()) {//设置九宫格
-                    twoNinegridview.setAdapter(getNineGridAdapter(MonoTeaDto.EntityListBean.MeowBean.ThumbBean.class));
                     twoNinegridview.setImagesData(pics);
+                    if (mItemImageClickListener != null) {
+                        twoNinegridview.setItemImageClickListener(mItemImageClickListener);
+                    }
+                }
+                break;
+            case MonoMultipleItem.TYPE_CATEGORY:
+                ImageView categoryThumbIv = helper.getView(R.id.thumb_iv);
+                TextView categoryMultipleTv = helper.getView(R.id.multiple_tv);
+                TextView categoryTitleTv = helper.getView(R.id.title_tv);
+                TextView categoryDesTv = helper.getView(R.id.des_tv);
+                TextView categoryNameTv = helper.getView(R.id.name_tv);
+
+                MonoCategoryDto.MeowsBean meowsBean = item.getMeowsBean();
+                if (meowsBean != null) {
+                    MonoCategoryDto.MeowBean meowBean = meowsBean.getMeow();
+                    MonoCategoryDto.MeowBean.ThumbBean categoryThumb = meowBean.getThumb();
+                    List<MonoCategoryDto.MeowBean.ThumbBean> images = meowBean.getImages();
+                    if (categoryThumb != null) {
+                        categoryMultipleTv.setVisibility(View.GONE);
+                        String raw = categoryThumb.getRaw();
+                        if (raw.contains("gif")) {
+                            GlideUtil.loadGif(mContext, raw, categoryThumbIv);
+                        } else {
+                            GlideUtil.load(mContext, raw, categoryThumbIv);
+                        }
+                    } else {
+                        if (images != null && !images.isEmpty()) {
+                            MonoCategoryDto.MeowBean.ThumbBean thumbBean = images.get(0);
+                            String raw = thumbBean.getRaw();
+                            if (raw.contains("gif")) {
+                                GlideUtil.loadGif(mContext, raw, categoryThumbIv);
+                            } else {
+                                GlideUtil.load(mContext, raw, categoryThumbIv);
+                            }
+                        }
+                    }
+                    if (images != null && !images.isEmpty()) {
+                        categoryMultipleTv.setVisibility(View.VISIBLE);
+                        categoryMultipleTv.setText(images.size() + "张");
+                        Drawable drawable = DrawableUtil.tintDrawable(mContext, R.drawable.placeholder, R.color.colorCyan);
+                        drawable.setBounds(0, 0, 30, 30);
+                        GradientDrawable gradientDrawable = new DrawableUtil.DrawableBuilder(mContext).setColor(R.color.translucentBlack).setGradientRoundRadius(30).createGradientDrawable();
+                        categoryMultipleTv.setBackgroundDrawable(gradientDrawable);
+                        categoryMultipleTv.setCompoundDrawables(drawable, null, null, null);
+                    } else {
+                        categoryMultipleTv.setVisibility(View.GONE);
+                    }
+                    categoryTitleTv.setText(meowBean.getTitle());
+                    categoryDesTv.setText(meowBean.getDescription());
+                    MonoCategoryDto.MeowBean.GroupBean group = meowBean.getGroup();
+                    if (group != null) {
+                        categoryNameTv.setText(group.getName());
+                    }
                 }
                 break;
         }
     }
 
-    private <T> NineGridViewAdapter<T> getNineGridAdapter(T t) {
-        NineGridViewAdapter<T> adapter = new NineGridViewAdapter<T>() {
-            @Override
-            protected void onDisplayImage(Context context, ImageView imageView, T t) {
-                if (t instanceof MonoTeaDto.EntityListBean.MeowBean.ThumbBean) {
-                    String raw = ((MonoTeaDto.EntityListBean.MeowBean.ThumbBean) t).getRaw();
-                    if (raw.contains("gif")) {
-                        GlideUtil.loadGif(context, raw, imageView);
-                    } else {
-                        GlideUtil.load(context, raw, imageView);
-                    }
-                }
-            }
-
-            @Override
-            protected ImageView generateImageView(Context context) {
-                GridImageView imageView = new GridImageView(context);
-                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                return imageView;
-            }
-        };
-        return adapter;
+    public void setNineGridItemClickListener(ItemImageClickListener<MonoTeaDto.EntityListBean.MeowBean.ThumbBean> itemImageViewClickListener) {
+        mItemImageClickListener = itemImageViewClickListener;
     }
 }

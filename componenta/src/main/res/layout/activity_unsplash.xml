@@ -18,5 +18,4 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_14" />
-
 </android.support.constraint.ConstraintLayout>

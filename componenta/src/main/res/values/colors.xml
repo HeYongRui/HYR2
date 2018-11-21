@@ -4,8 +4,10 @@
     <color name="colorPrimaryDark">#9ec7f5</color>
     <color name="colorAccent">#ffe4be</color>
     <color name="lightWhite">#c5ffffff</color>
+    <color name="translucentBlack">#9c000000</color>
     <color name="colorTextDark">#000000</color>
     <color name="colorTextLight">#2e2e2e</color>
     <color name="colorTextGray">#808080</color>
     <color name="colorTextHint">#ffb2b2b2</color>
+    <color name="colorCyan">#52a4ff</color>
 </resources>

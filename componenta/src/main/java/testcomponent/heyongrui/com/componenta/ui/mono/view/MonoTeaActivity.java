@@ -3,7 +3,10 @@ package testcomponent.heyongrui.com.componenta.ui.mono.view;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -11,6 +14,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
@@ -18,6 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 import testcomponent.heyongrui.com.base.base.BaseActivity;
+import testcomponent.heyongrui.com.base.config.glide.GlideApp;
 import testcomponent.heyongrui.com.base.network.configure.ResponseDisposable;
 import testcomponent.heyongrui.com.base.util.TimeUtil;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.RecycleViewItemDecoration;
@@ -26,6 +32,8 @@ import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 import testcomponent.heyongrui.com.componenta.net.service.MonoSerevice;
 import testcomponent.heyongrui.com.componenta.ui.mono.adapter.MonoAdapter;
 import testcomponent.heyongrui.com.componenta.ui.mono.adapter.MonoMultipleItem;
+import testcomponent.heyongrui.com.componenta.widget.imagewatcher.ImageWatcher;
+import testcomponent.heyongrui.com.componenta.widget.imagewatcher.ImageWatcherHelper;
 
 /**
  * Created by lambert on 2018/11/5.
@@ -36,7 +44,9 @@ public class MonoTeaActivity extends BaseActivity {
     RecyclerView recyclerView;
     TextView headTv;
     TextView summaryTv;
+
     private MonoAdapter monoAdapter;
+    private ImageWatcherHelper mIwHelper;
 
     public static void launchActivity(Context context) {
         Intent intent = new Intent();
@@ -52,8 +62,33 @@ public class MonoTeaActivity extends BaseActivity {
     @Override
     public void init(Bundle savedInstanceState) {
         recyclerView = findViewById(R.id.recyclerView);
+        initImageWatcher();
         initRecyclerView();
         getTea();
+    }
+
+    private void initImageWatcher() {
+        mIwHelper = ImageWatcherHelper.with(this, (ImageWatcher.Loader<MonoTeaDto.EntityListBean.MeowBean.ThumbBean>) (context, thumbBean, lc) -> {
+            if (thumbBean == null) return;
+            String raw = thumbBean.getRaw();
+            GlideApp.with(context).load(raw)
+                    .into(new SimpleTarget<Drawable>() {
+                        @Override
+                        public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                            lc.onResourceReady(resource);
+                        }
+
+                        @Override
+                        public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                            lc.onLoadFailed(errorDrawable);
+                        }
+
+                        @Override
+                        public void onLoadStarted(@Nullable Drawable placeholder) {
+                            lc.onLoadStarted(placeholder);
+                        }
+                    });
+        });
     }
 
     private void initRecyclerView() {
@@ -83,6 +118,19 @@ public class MonoTeaActivity extends BaseActivity {
             if (TextUtils.isEmpty(rec_url)) return;
             MonoH5Activity.launchActivity(this, rec_url);
         });
+        monoAdapter.setOnItemChildClickListener((adapter, view, position) -> {
+            if (view.getId() == R.id.category_tv) {
+                MonoTeaDto.EntityListBean entityListBean = monoAdapter.getData().get(position).getEntityListBean();
+                if (entityListBean == null) return;
+                MonoTeaDto.EntityListBean.MeowBean meow = entityListBean.getMeow();
+                if (meow == null) return;
+                MonoTeaDto.EntityListBean.MeowBean.GroupBean group = meow.getGroup();
+                if (group == null) return;
+                MonoCategoryActivity.launchActivity(MonoTeaActivity.this, group.getCategory_id(), group.getCategory());
+            }
+        });
+        monoAdapter.setNineGridItemClickListener((context, baseNineGridLayout, imageView, index, thumbBean, list) ->
+                mIwHelper.show(imageView, baseNineGridLayout.getmImageViewList(), list));
     }
 
 
@@ -140,6 +188,14 @@ public class MonoTeaActivity extends BaseActivity {
             } else {
                 monoAdapter.addData(new MonoMultipleItem(MonoMultipleItem.TYPE_TWO, entityListBean));
             }
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (!mIwHelper.handleBackPressed()) {
+            super.onBackPressed();
         }
     }
 }

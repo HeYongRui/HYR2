@@ -22,6 +22,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/BaseAppTheme" />
         <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+        <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoH5Activity"
             android:screenOrientation="portrait"
             android:theme="@style/BaseAppTheme" />

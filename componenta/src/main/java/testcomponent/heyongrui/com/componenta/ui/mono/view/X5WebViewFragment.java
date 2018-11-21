@@ -9,6 +9,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -40,10 +41,12 @@ public class X5WebViewFragment extends BaseFragment {
     private ImageView forwardIv;
     private Dialog progressDialog;
 
-    public static X5WebViewFragment newInstance(String homeUrl) {
+    public static X5WebViewFragment newInstance(String homeUrl, String htmlData, boolean isShowDialog) {
         X5WebViewFragment fragment = new X5WebViewFragment();
         Bundle bundle = new Bundle();
         bundle.putString("homeUrl", homeUrl);
+        bundle.putString("htmlData", htmlData);
+        bundle.putBoolean("isShowDialog", isShowDialog);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -156,18 +159,28 @@ public class X5WebViewFragment extends BaseFragment {
         Bundle arguments = getArguments();
         if (arguments == null) return;
         String homeUrl = arguments.getString("homeUrl", "");
-        x5WebView.loadUrl(homeUrl);
-        switchProgressDialog(true);
+        String htmlData = arguments.getString("htmlData", "");
+        boolean isShowDialog = arguments.getBoolean("isShowDialog", true);
+        if (!TextUtils.isEmpty(homeUrl)) {//加载网页
+            x5WebView.loadUrl(homeUrl);
+        } else if (!TextUtils.isEmpty(htmlData)) {//加载HTML代码
+            x5WebView.loadDataWithBaseURL(null, htmlData, "text/html", "utf-8", null);//这种写法可以正确解码
+        }
+        switchProgressDialog(isShowDialog);
     }
 
     private void switchProgressDialog(boolean isShow) {
-        if (progressDialog == null) {
-            progressDialog = new CatLoadingView(mContext);
-        }
-        if (isShow && !progressDialog.isShowing()) {
-            progressDialog.show();
+        if (isShow) {
+            if (progressDialog == null) {
+                progressDialog = new CatLoadingView(mContext);
+            }
+            if (!progressDialog.isShowing()) {
+                progressDialog.show();
+            }
         } else {
-            progressDialog.dismiss();
+            if (progressDialog != null && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
         }
     }
 }

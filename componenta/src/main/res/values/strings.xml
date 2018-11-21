@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ComponentA</string>
-    <string name="wechat">微信</string>
     <string-array name="weekdays">
         <item>星期日</item>
         <item>星期一</item>

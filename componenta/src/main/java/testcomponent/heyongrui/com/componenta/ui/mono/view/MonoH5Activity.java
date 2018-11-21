@@ -38,7 +38,7 @@ public class MonoH5Activity extends BaseActivity {
         if (extras != null) {
             url = extras.getString("url", "");
         }
-        X5WebViewFragment x5WebViewFragment = X5WebViewFragment.newInstance(url);
+        X5WebViewFragment x5WebViewFragment = X5WebViewFragment.newInstance(url, null, true);
         replaceFragment(R.id.x5webview_content_fragment, x5WebViewFragment, "");
     }
 }

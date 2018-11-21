@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.LogUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -49,7 +49,7 @@ public class UnsplashActivity extends BaseActivity {
     QingMangService qingMangService;
 
     private int page = 1;
-    private int per_page = 10;
+    private int per_page = 20;
     private UnsplashAdapter unsplashAdapter;
 
     public static void launchActivity(Context context) {
@@ -115,9 +115,8 @@ public class UnsplashActivity extends BaseActivity {
                     @Override
                     protected void onSuccess(ResponseBody responseBody) {
                         try {
-                            String string = responseBody.string();
-                            tv.setText(string);
-                            LogUtils.e(string);
+                            String xmlContent = responseBody.string();
+                            Log.d("getQingMang", xmlContent);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -131,7 +130,7 @@ public class UnsplashActivity extends BaseActivity {
     }
 
     private void getUnsplashPics() {
-//        mRxManager.add(unsplashService.getRandomPicMap(page, per_page)
+//        mRxManager.add(new UnsplashService().getRandomPicMap(page, per_page)
 //                .subscribeWith(new ResponseDisposable<List<UnsplashPicDto>>(this, true) {
 //                    @Override
 //                    protected void onSuccess(List<UnsplashPicDto> unsplashPicListDto) {

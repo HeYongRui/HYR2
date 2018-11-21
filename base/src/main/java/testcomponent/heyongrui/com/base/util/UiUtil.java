@@ -138,12 +138,22 @@ public class UiUtil {
     }
 
     /**
+     * 创建文本多个状态时颜色列表
+     */
+    public static ColorStateList createTextColorStateList(int selectedColor, int pressedColor, int normalColor) {
+        int[] colors = new int[]{selectedColor, pressedColor, normalColor};
+        int[][] states = new int[3][];
+        states[0] = new int[]{android.R.attr.state_selected};
+        states[1] = new int[]{android.R.attr.state_pressed};
+        states[2] = new int[]{};
+        ColorStateList colorList = new ColorStateList(states, colors);
+        return colorList;
+    }
+
+    /**
      * 创建多个状态时颜色列表
      */
     public static ColorStateList createColorStateList(Context context, int normalColor, int pressedColor, int selectedColor) {
-        normalColor = ContextCompat.getColor(context, normalColor);
-        pressedColor = ContextCompat.getColor(context, pressedColor);
-        selectedColor = ContextCompat.getColor(context, selectedColor);
         int[] colors = new int[]{normalColor, pressedColor, selectedColor};
         int[][] states = new int[3][];
         states[0] = new int[]{};
@@ -156,19 +166,15 @@ public class UiUtil {
     /**
      * 创建正常和禁用状态颜色列表
      */
-    public static ColorStateList createColorStateList(Context context, int normalColor, int unableColor) {
-        ColorStateList colorStateList = createColorStateList(context, normalColor, normalColor, normalColor, unableColor);
+    public static ColorStateList createColorStateList(int normalColor, int unableColor) {
+        ColorStateList colorStateList = createColorStateList(normalColor, normalColor, normalColor, unableColor);
         return colorStateList;
     }
 
     /**
      * 创建多个状态时颜色列表
      */
-    public static ColorStateList createColorStateList(Context context, int normalColor, int pressedColor, int focusedColor, int unableColor) {
-        normalColor = ContextCompat.getColor(context, normalColor);
-        pressedColor = ContextCompat.getColor(context, pressedColor);
-        focusedColor = ContextCompat.getColor(context, focusedColor);
-        unableColor = ContextCompat.getColor(context, unableColor);
+    public static ColorStateList createColorStateList(int normalColor, int pressedColor, int focusedColor, int unableColor) {
         int[] colors = new int[]{pressedColor, focusedColor, normalColor, focusedColor, unableColor, normalColor};
         int[][] states = new int[6][];
         states[0] = new int[]{android.R.attr.state_pressed, android.R.attr.state_enabled};

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/dp_10">
@@ -26,17 +25,18 @@
         android:textSize="@dimen/sp_14"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="@+id/avatar_iv"
-        app:layout_constraintEnd_toStartOf="@+id/wx_link_tv"
+        app:layout_constraintEnd_toStartOf="@+id/category_tv"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@+id/avatar_iv"
         app:layout_constraintTop_toTopOf="@+id/avatar_iv" />
 
     <TextView
-        android:id="@+id/wx_link_tv"
+        android:id="@+id/category_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_10"
-        android:text="@string/wechat"
+        android:padding="@dimen/dp_4"
+        android:text="分类"
         android:textColor="#FF5B9CE6"
         android:textSize="@dimen/sp_14"
         app:layout_constraintBottom_toBottomOf="@+id/avatar_iv"
@@ -65,14 +65,13 @@
         android:textSize="@dimen/sp_12"
         app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
-    <testcomponent.heyongrui.com.componenta.widget.ninegridimageview.NineGridView
+    <testcomponent.heyongrui.com.componenta.widget.ninegridimageview.NineGridLayout
         android:id="@+id/ninegridview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
-        app:imgGap="@dimen/dp_4"
         app:layout_constraintTop_toBottomOf="@+id/text_tv"
-        app:maxSize="9"
-        app:showStyle="grid"
-        tools:layout_height="150dp" />
+        app:maxCount="9"
+        app:sapcing="@dimen/dp_4" />
+
 </android.support.constraint.ConstraintLayout>
