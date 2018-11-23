@@ -16,6 +16,7 @@ public class TimeUtil {
     public final static String MIN = "yyyy-MM-dd HH:mm";
     public final static String MIN_TWO = "MM-dd HH:mm";
     public final static String HOURS_MIN = "HH:mm";
+    public final static String MIN_SEC = "mm:ss";
     public final static String DAY_ONE = "yyyy-MM-dd";
     public final static String DAY_TWO = "yyyy.MM.dd";
     public final static String DAY_THREE = "MM-dd";
@@ -61,5 +62,30 @@ public class TimeUtil {
         c.setTime(date);
         int weekday = c.get(Calendar.DAY_OF_WEEK) - 1;
         return weekday < 0 ? 0 : weekday;
+    }
+
+    /**
+     * 将毫秒转换成目标格式的字符串
+     */
+    public static String msToString(long millisecond, String targetDateType) {
+        SimpleDateFormat formatter = new SimpleDateFormat(targetDateType);
+        return formatter.format(millisecond);
+    }
+
+    /**
+     * 将时间格式的字符串转换成对应的毫秒
+     */
+    public static long stringToms(String timeString) {
+        if (timeString.matches("([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])")) {
+            //正则判断是否满足HH:mm:ss格式
+            String[] my = timeString.split(":");
+            int hour = Integer.parseInt(my[0]);
+            int min = Integer.parseInt(my[1]);
+            int sec = Integer.parseInt(my[2]);
+            long totalSec = hour * 3600 + min * 60 + sec;
+            return totalSec;
+        } else {
+            throw new IllegalArgumentException("timeString is Illegal");
+        }
     }
 }

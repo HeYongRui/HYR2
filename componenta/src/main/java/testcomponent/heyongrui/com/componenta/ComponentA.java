@@ -9,6 +9,7 @@ import com.billy.cc.core.component.CC;
 import com.billy.cc.core.component.CCResult;
 import com.billy.cc.core.component.CCUtil;
 import com.billy.cc.core.component.IComponent;
+import com.billy.cc.core.component.IMainThread;
 import com.tencent.smtt.sdk.QbSdk;
 
 import java.io.Serializable;
@@ -16,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity;
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTeaActivity;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
 
@@ -23,7 +25,7 @@ import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
  * Created by lambert on 2018/9/28.
  */
 
-public class ComponentA implements IComponent {
+public class ComponentA implements IComponent, IMainThread {
 
     private AtomicBoolean initialized = new AtomicBoolean(false);
     private final HashMap<String, BaseInterceptor> map = new HashMap<>();
@@ -98,10 +100,18 @@ public class ComponentA implements IComponent {
         } else if (TextUtils.equals("openUnsplash", actionName)) {
             CCUtil.navigateTo(cc, UnsplashActivity.class);
             CC.sendCCResult(cc.getCallId(), CCResult.success());
-        } else if (TextUtils.equals("openMono", actionName)) {
+        } else if (TextUtils.equals("openMonoTea", actionName)) {
             CCUtil.navigateTo(cc, MonoTeaActivity.class);
+            CC.sendCCResult(cc.getCallId(), CCResult.success());
+        } else if (TextUtils.equals("openMonoTab", actionName)) {
+            CCUtil.navigateTo(cc, MonoTabActivity.class);
             CC.sendCCResult(cc.getCallId(), CCResult.success());
         }
         return false;
+    }
+
+    @Override
+    public Boolean shouldActionRunOnMainThread(String actionName, CC cc) {
+        return null;
     }
 }

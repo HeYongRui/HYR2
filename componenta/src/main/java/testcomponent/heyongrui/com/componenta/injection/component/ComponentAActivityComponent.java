@@ -6,6 +6,9 @@ import testcomponent.heyongrui.com.base.injection.annotation.PerActivity;
 import testcomponent.heyongrui.com.base.injection.component.BaseAppComponent;
 import testcomponent.heyongrui.com.componenta.ComponentActivityA;
 import testcomponent.heyongrui.com.componenta.injection.module.ComponentAActivityModule;
+import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryActivity;
+import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity;
+import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
 
 /**
  * lambert
@@ -20,4 +23,10 @@ import testcomponent.heyongrui.com.componenta.injection.module.ComponentAActivit
 public interface ComponentAActivityComponent {
 
     void inject(ComponentActivityA baseActivity);
+
+    void inject(UnsplashActivity unsplashActivity);
+
+    void inject(MonoCategoryActivity monoCategoryActivity);
+
+    void inject(MonoTabActivity monoTabActivity);
 }

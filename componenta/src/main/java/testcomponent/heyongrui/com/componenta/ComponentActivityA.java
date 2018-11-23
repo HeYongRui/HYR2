@@ -128,7 +128,7 @@ public class ComponentActivityA extends AppCompatActivity implements TestContrac
     private void removeDynamicComponent() {
         if (customIDynamicComponent != null) {
             //从CC框架中注销此动态组件
-            CC.registerComponent(customIDynamicComponent);
+            CC.unregisterComponent(customIDynamicComponent);
             //从ComponentB的登录状态监听列表中移除此动态组件：此后，登录状态改变将不再尝试通知此动态组件
             CC.obtainBuilder("ComponentB")
                     .setActionName("removeLoginObserver")

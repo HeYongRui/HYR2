@@ -1,13 +1,18 @@
 package testcomponent.heyongrui.com.componenta.ui.mono.adapter;
 
+import android.graphics.drawable.ClipDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
@@ -17,9 +22,11 @@ import java.util.List;
 
 import testcomponent.heyongrui.com.base.util.DrawableUtil;
 import testcomponent.heyongrui.com.base.util.GlideUtil;
+import testcomponent.heyongrui.com.base.util.TimeUtil;
 import testcomponent.heyongrui.com.base.util.UiUtil;
 import testcomponent.heyongrui.com.componenta.R;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoCategoryDto;
+import testcomponent.heyongrui.com.componenta.net.dto.MonoTabDto;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.ItemImageClickListener;
 import testcomponent.heyongrui.com.componenta.widget.ninegridimageview.NineGridLayout;
@@ -43,6 +50,7 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
         addItemType(MonoMultipleItem.TYPE_ONE, R.layout.adapter_item_monotea_one);
         addItemType(MonoMultipleItem.TYPE_TWO, R.layout.adapter_item_monotea_two);
         addItemType(MonoMultipleItem.TYPE_CATEGORY, R.layout.adapter_item_monocategory);
+        addItemType(MonoMultipleItem.TYPE_TAB_MUSIC, R.layout.adapter_item_mono_music_tab);
     }
 
     @Override
@@ -202,7 +210,71 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
                     }
                 }
                 break;
+            case MonoMultipleItem.TYPE_TAB_MUSIC:
+                ImageView musicAvatarIv = helper.getView(R.id.avatar_iv);
+                TextView musicNicknameTv = helper.getView(R.id.nickname_tv);
+                TextView musicCategoryTv = helper.getView(R.id.category_tv);
+                ImageView musicThumbIv = helper.getView(R.id.thumb_iv);
+                ProgressBar musicProgressbar = helper.getView(R.id.progressbar);
+                musicProgressbar.setMax(100);
+                musicProgressbar.setProgress(0);
+                ImageView musicPlayIv = helper.getView(R.id.play_iv);
+                musicPlayIv.setImageResource(R.drawable.play);
+                helper.addOnClickListener(R.id.play_iv);
+                TextView musicSongNameTv = helper.getView(R.id.song_name_tv);
+                TextView musicDurationTv = helper.getView(R.id.duration_tv);
+                TextView musicTitleTv = helper.getView(R.id.title_tv);
+                TextView musicDescTv = helper.getView(R.id.desc_tv);
+
+                MonoTabDto.EntityListBean tabEntityListBean = item.getTabEntityListBean();
+                if (tabEntityListBean != null) {
+                    MonoTabDto.EntityListBean.MeowBean meow = tabEntityListBean.getMeow();
+                    if (meow != null) {
+                        MonoTabDto.EntityListBean.MeowBean.GroupBean group = meow.getGroup();
+                        if (group != null) {
+                            String logo_url = group.getLogo_url();
+                            if (logo_url.contains("gif")) {
+                                GlideUtil.loadGif(mContext, logo_url, musicAvatarIv);
+                            } else {
+                                GlideUtil.load(mContext, logo_url, musicAvatarIv);
+                            }
+                            musicNicknameTv.setText(group.getName());
+                            musicCategoryTv.setText(group.getCategory());
+
+                        }
+                        MonoTabDto.EntityListBean.MeowBean.ThumbBean musicThumb = meow.getThumb();
+                        if (musicThumb != null) {
+                            String raw = musicThumb.getRaw();
+                            if (raw.contains("gif")) {
+                                GlideUtil.loadGif(mContext, raw, musicThumbIv);
+                            } else {
+                                GlideUtil.load(mContext, raw, musicThumbIv);
+                            }
+                        }
+                        musicSongNameTv.setText(meow.getSong_name() + "-" + meow.getArtist());
+                        String music_duration = TimeUtil.msToString(meow.getMusic_duration() * 1000, TimeUtil.MIN_SEC);
+                        musicDurationTv.setText(music_duration);
+                        musicTitleTv.setText(meow.getTitle());
+                        musicDescTv.setText(meow.getDescription());
+                    }
+                }
+                break;
         }
+    }
+
+    public void setColors(ProgressBar progressBar, int backgroundColor, int progressColor) {
+        //Background
+        ClipDrawable bgClipDrawable = new ClipDrawable(new ColorDrawable(backgroundColor), Gravity.LEFT, ClipDrawable.HORIZONTAL);
+        bgClipDrawable.setLevel(10000);
+        //Progress
+        ClipDrawable progressClip = new ClipDrawable(new ColorDrawable(progressColor), Gravity.LEFT, ClipDrawable.HORIZONTAL);
+        //Setup LayerDrawable and assign to progressBar
+        Drawable[] progressDrawables = {bgClipDrawable, progressClip/*second*/, progressClip};
+        LayerDrawable progressLayerDrawable = new LayerDrawable(progressDrawables);
+        progressLayerDrawable.setId(0, android.R.id.background);
+        progressLayerDrawable.setId(1, android.R.id.secondaryProgress);
+        progressLayerDrawable.setId(2, android.R.id.progress);
+        progressBar.setProgressDrawable(progressLayerDrawable);
     }
 
     public void setNineGridItemClickListener(ItemImageClickListener<MonoTeaDto.EntityListBean.MeowBean.ThumbBean> itemImageViewClickListener) {

@@ -19,11 +19,16 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import testcomponent.heyongrui.com.base.BaseApp;
 import testcomponent.heyongrui.com.base.base.BaseActivity;
 import testcomponent.heyongrui.com.base.network.configure.ResponseDisposable;
 import testcomponent.heyongrui.com.base.util.DrawableUtil;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.RecycleViewItemDecoration;
 import testcomponent.heyongrui.com.componenta.R;
+import testcomponent.heyongrui.com.componenta.injection.component.DaggerComponentAActivityComponent;
+import testcomponent.heyongrui.com.componenta.injection.module.ComponentAActivityModule;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoCategoryDto;
 import testcomponent.heyongrui.com.componenta.net.service.MonoSerevice;
 import testcomponent.heyongrui.com.componenta.ui.mono.adapter.MonoAdapter;
@@ -37,10 +42,12 @@ public class MonoCategoryActivity extends BaseActivity {
     private TextView titleTv;
 
     private MonoAdapter monoAdapter;
-    private MonoSerevice monoSerevice;
     private int mCategoryId;
     private Integer mStart;
     private boolean mIsLastPage;
+
+    @Inject
+    MonoSerevice monoSerevice;
 
     public static void launchActivity(Context context, int category_id, String category_name) {
         Intent intent = new Intent();
@@ -59,9 +66,18 @@ public class MonoCategoryActivity extends BaseActivity {
 
     @Override
     public void init(Bundle savedInstanceState) {
+        initInject();
         initView();
         initData();
     }
+
+    private void initInject() {
+        DaggerComponentAActivityComponent.builder()
+                .componentAActivityModule(new ComponentAActivityModule(this))
+                .baseAppComponent(BaseApp.getInstance().getBaseAppComponent())
+                .build().inject(this);
+    }
+
 
     private void initView() {
         ImageView backIv = findViewById(R.id.back_iv);
@@ -96,7 +112,7 @@ public class MonoCategoryActivity extends BaseActivity {
                 if (mIsLastPage) {
                     refreshlayout.setLoadmoreFinished(true);
                 } else {
-                    getCategory(mCategoryId, mStart, false);
+                    getCategory(false);
                 }
             }
 
@@ -105,7 +121,7 @@ public class MonoCategoryActivity extends BaseActivity {
                 refreshlayout.finishLoadmore();
                 refreshlayout.finishRefresh();
                 refreshlayout.setLoadmoreFinished(false);
-                getCategory(mCategoryId, mStart, true);
+                getCategory(true);
             }
         });
     }
@@ -133,17 +149,16 @@ public class MonoCategoryActivity extends BaseActivity {
         String category_name = extras.getString("category_name");
         titleTv.setText(category_name);
         if (mCategoryId == -1) return;
-        getCategory(mCategoryId, mStart, true);
+        getCategory(true);
     }
 
-    private void getCategory(int category_id, Integer start, boolean is_clear_data) {
-        monoSerevice = monoSerevice == null ? new MonoSerevice() : monoSerevice;
-        mRxManager.add(monoSerevice.getCategory(category_id, start)
+    private void getCategory(boolean is_clear_data) {
+        mStart = is_clear_data ? 0 : mStart + 1;
+        mRxManager.add(monoSerevice.getCategory(mCategoryId, mStart)
                 .subscribeWith(new ResponseDisposable<MonoCategoryDto>(this) {
                     @Override
                     protected void onSuccess(MonoCategoryDto monoCategoryDto) {
                         if (monoCategoryDto == null) return;
-                        mStart = monoCategoryDto.getStart();
                         mIsLastPage = monoCategoryDto.isIs_last_page();
                         List<MonoCategoryDto.MeowsBean> meows = monoCategoryDto.getMeows();
                         if (meows == null || meows.isEmpty()) return;

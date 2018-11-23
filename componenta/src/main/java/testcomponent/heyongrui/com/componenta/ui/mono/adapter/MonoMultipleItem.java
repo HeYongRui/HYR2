@@ -3,6 +3,7 @@ package testcomponent.heyongrui.com.componenta.ui.mono.adapter;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 import testcomponent.heyongrui.com.componenta.net.dto.MonoCategoryDto;
+import testcomponent.heyongrui.com.componenta.net.dto.MonoTabDto;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 
 /**
@@ -14,6 +15,7 @@ public class MonoMultipleItem implements MultiItemEntity {
     public static final int TYPE_ONE = 10001;
     public static final int TYPE_TWO = 10002;
     public static final int TYPE_CATEGORY = 10003;
+    public static final int TYPE_TAB_MUSIC = 10004;
 
     public static final int SPAN_SIZE_ONE = 1;
 
@@ -21,6 +23,7 @@ public class MonoMultipleItem implements MultiItemEntity {
     private int spanSize;
     private MonoTeaDto.EntityListBean entityListBean;
     private MonoCategoryDto.MeowsBean meowsBean;
+    private MonoTabDto.EntityListBean tabEntityListBean;
 
     public MonoMultipleItem(int itemType, MonoTeaDto.EntityListBean entityListBean) {
         this.itemType = itemType;
@@ -30,6 +33,11 @@ public class MonoMultipleItem implements MultiItemEntity {
     public MonoMultipleItem(int itemType, MonoCategoryDto.MeowsBean meowsBean) {
         this.itemType = itemType;
         this.meowsBean = meowsBean;
+    }
+
+    public MonoMultipleItem(int itemType, MonoTabDto.EntityListBean tabEntityListBean) {
+        this.itemType = itemType;
+        this.tabEntityListBean = tabEntityListBean;
     }
 
     public MonoMultipleItem(int itemType, int spanSize, MonoTeaDto.EntityListBean entityListBean) {
@@ -69,5 +77,13 @@ public class MonoMultipleItem implements MultiItemEntity {
 
     public void setMeowsBean(MonoCategoryDto.MeowsBean meowsBean) {
         this.meowsBean = meowsBean;
+    }
+
+    public MonoTabDto.EntityListBean getTabEntityListBean() {
+        return tabEntityListBean;
+    }
+
+    public void setTabEntityListBean(MonoTabDto.EntityListBean tabEntityListBean) {
+        this.tabEntityListBean = tabEntityListBean;
     }
 }

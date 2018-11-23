@@ -11,6 +11,7 @@ import testcomponent.heyongrui.com.base.network.service.ApiService;
 import testcomponent.heyongrui.com.base.util.TimeUtil;
 import testcomponent.heyongrui.com.componenta.net.api.MonoApi;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoCategoryDto;
+import testcomponent.heyongrui.com.componenta.net.dto.MonoTabDto;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 
 /**
@@ -48,6 +49,14 @@ public class MonoSerevice {
     public Observable<ResponseBody> getMeowDetail(int meow_id) {
         return ApiService.createApi(MonoApi.class, BASE_URL_MONO)
                 .getMeowDetail(meow_id)
+                .compose(RxHelper.rxSchedulerHelper());
+//                .compose(RxHelper.handleResult());
+    }
+
+    public Observable<MonoTabDto> getMusicTab(int page, int per_page) {
+        String start = page + "," + per_page;
+        return ApiService.createApi(MonoApi.class, BASE_URL_MONO)
+                .getTab(8, start, 3)
                 .compose(RxHelper.rxSchedulerHelper());
 //                .compose(RxHelper.handleResult());
     }

@@ -21,12 +21,15 @@ import java.util.List;
 import javax.inject.Inject;
 
 import okhttp3.ResponseBody;
+import testcomponent.heyongrui.com.base.BaseApp;
 import testcomponent.heyongrui.com.base.base.BaseActivity;
 import testcomponent.heyongrui.com.base.network.configure.ResponseDisposable;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.Divider;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.DividerBuilder;
 import testcomponent.heyongrui.com.base.widget.itemdecoration.RecycleViewItemDecoration;
 import testcomponent.heyongrui.com.componenta.R;
+import testcomponent.heyongrui.com.componenta.injection.component.DaggerComponentAActivityComponent;
+import testcomponent.heyongrui.com.componenta.injection.module.ComponentAActivityModule;
 import testcomponent.heyongrui.com.componenta.net.dto.UnsplashPicDto;
 import testcomponent.heyongrui.com.componenta.net.service.QingMangService;
 import testcomponent.heyongrui.com.componenta.net.service.UnsplashService;
@@ -65,11 +68,19 @@ public class UnsplashActivity extends BaseActivity {
 
     @Override
     public void init(Bundle savedInstanceState) {
+        initInject();
         recyclerView = findViewById(R.id.recyclerView);
         tv = findViewById(R.id.tv);
         initRecyclerView();
         getQingMang();
         getUnsplashPics();
+    }
+
+    private void initInject() {
+        DaggerComponentAActivityComponent.builder()
+                .componentAActivityModule(new ComponentAActivityModule(this))
+                .baseAppComponent(BaseApp.getInstance().getBaseAppComponent())
+                .build().inject(this);
     }
 
     private void initRecyclerView() {
@@ -110,7 +121,7 @@ public class UnsplashActivity extends BaseActivity {
     }
 
     private void getQingMang() {
-        mRxManager.add(new QingMangService().getQingMang("2.0.3", "0214084828574de8b60c1197f30b2e34d38295fb", 94)
+        mRxManager.add(qingMangService.getQingMang("2.0.3", "0214084828574de8b60c1197f30b2e34d38295fb", 94)
                 .subscribeWith(new ResponseDisposable<ResponseBody>(this) {
                     @Override
                     protected void onSuccess(ResponseBody responseBody) {
@@ -130,7 +141,7 @@ public class UnsplashActivity extends BaseActivity {
     }
 
     private void getUnsplashPics() {
-//        mRxManager.add(new UnsplashService().getRandomPicMap(page, per_page)
+//        mRxManager.add(unsplashService.getRandomPicMap(page, per_page)
 //                .subscribeWith(new ResponseDisposable<List<UnsplashPicDto>>(this, true) {
 //                    @Override
 //                    protected void onSuccess(List<UnsplashPicDto> unsplashPicListDto) {
