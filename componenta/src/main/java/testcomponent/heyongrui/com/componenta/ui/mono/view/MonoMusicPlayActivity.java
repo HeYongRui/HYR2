@@ -171,7 +171,7 @@ public class MonoMusicPlayActivity extends BaseActivity {
             }
         });
         //设置监听器
-        addOnClickListeners((View.OnClickListener) view -> {
+        addOnClickListeners(view -> {
             int id = view.getId();
             if (id == R.id.back_iv) {
                 finish();
