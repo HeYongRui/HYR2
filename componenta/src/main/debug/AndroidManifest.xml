@@ -16,23 +16,41 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="testcomponent.heyongrui.com.componenta.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/demo_a_AppTheme" />
+        <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTeaActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/demo_a_AppTheme" />
+        <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoH5Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/demo_a_AppTheme" />
+        <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoMusicPlayActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashDetailActivity"
-            android:theme="@style/demo_a_AppTheme" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullscreen" />
 
         <service
             android:name="testcomponent.heyongrui.com.componenta.musicservice.MusicService"

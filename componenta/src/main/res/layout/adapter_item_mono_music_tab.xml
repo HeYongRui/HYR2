@@ -53,11 +53,9 @@
         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
-        android:indeterminateTint="@color/colorPrimary"
-        android:progressDrawable="@drawable/progressbar"
         app:layout_constraintBottom_toBottomOf="@+id/thumb_iv"
         tools:max="100"
-        tools:progress="0" />
+        tools:heightPercent="0" />
 
     <ImageView
         android:id="@+id/play_iv"

@@ -81,7 +81,7 @@ public abstract class ResponseDisposable<T> extends DisposableObserver<T> {
         if (context == null) return;
         if (mLoadingDialog == null) {
             mLoadingDialog = new CatLoadingView(context);
-            ((CatLoadingView) mLoadingDialog).setText(loadingContent);
+            ((CatLoadingView) mLoadingDialog).setGraduallyText(loadingContent);
         }
         mLoadingDialog.setOnCancelListener(dialog -> unsubscribe());
         mLoadingDialog.setOnDismissListener(dialogInterface -> unsubscribe());

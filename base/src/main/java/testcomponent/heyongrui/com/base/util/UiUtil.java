@@ -7,8 +7,11 @@ import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
@@ -16,10 +19,13 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.FloatRange;
 import android.support.v4.content.ContextCompat;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -223,5 +229,50 @@ public class UiUtil {
         for (View view : views) {
             setOnclickFeedBack(context, normalColor, pressColor, view);
         }
+    }
+
+    /**
+     * 动态设置progressBar的颜色样式
+     */
+    public static void setProgressBarColors(ProgressBar progressBar, int backgroundColor, int progressColor) {
+        //Background
+        ClipDrawable bgClipDrawable = new ClipDrawable(new ColorDrawable(backgroundColor), Gravity.LEFT, ClipDrawable.HORIZONTAL);
+        //Progress
+        ClipDrawable progressClip = new ClipDrawable(new ColorDrawable(progressColor), Gravity.LEFT, ClipDrawable.HORIZONTAL);
+        //Setup LayerDrawable and assign to progressBar
+        Drawable[] progressDrawables = {bgClipDrawable, progressClip/*second*/, progressClip};
+        LayerDrawable progressLayerDrawable = new LayerDrawable(progressDrawables);
+        progressLayerDrawable.setId(0, android.R.id.background);
+        progressLayerDrawable.setId(1, android.R.id.secondaryProgress);
+        progressLayerDrawable.setId(2, android.R.id.progress);
+        progressBar.setProgressDrawable(progressLayerDrawable);
+        bgClipDrawable.setLevel(10000);
+    }
+
+    /**
+     * 动态设置SeekBar的颜色样式
+     */
+    public static void setSeekbarColors(SeekBar seekBar, int progressColor, int secondaryProgressColor, int backgroundColor) {
+        PorterDuff.Mode mMode = PorterDuff.Mode.SRC_ATOP;
+
+        LayerDrawable layerDrawable = (LayerDrawable) seekBar.getProgressDrawable();
+        Drawable progress = layerDrawable.findDrawableByLayerId(android.R.id.progress);
+        Drawable secondary = layerDrawable.findDrawableByLayerId(android.R.id.secondaryProgress);
+        Drawable background = layerDrawable.findDrawableByLayerId(android.R.id.background);
+        Drawable th = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            th = seekBar.getThumb();
+        }
+        // Setting colors
+        progress.setColorFilter(progressColor, mMode);
+        secondary.setColorFilter(secondaryProgressColor, mMode);
+        background.setColorFilter(backgroundColor, mMode);
+        if (th != null) {
+            th.setColorFilter(progressColor, mMode);
+        }
+        // Applying Tinted Drawables
+        layerDrawable.setDrawableByLayerId(android.R.id.progress, progress);
+        layerDrawable.setDrawableByLayerId(android.R.id.secondaryProgress, secondary);
+        layerDrawable.setDrawableByLayerId(android.R.id.background, background);
     }
 }

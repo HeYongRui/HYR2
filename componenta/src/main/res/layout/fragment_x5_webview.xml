@@ -39,7 +39,7 @@
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
             android:layout_marginLeft="@dimen/dp_10"
-            android:src="@drawable/forward"
+            android:src="@drawable/right_arrow"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/finish_iv"

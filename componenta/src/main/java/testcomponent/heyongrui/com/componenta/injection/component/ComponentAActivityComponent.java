@@ -7,6 +7,7 @@ import testcomponent.heyongrui.com.base.injection.component.BaseAppComponent;
 import testcomponent.heyongrui.com.componenta.ComponentActivityA;
 import testcomponent.heyongrui.com.componenta.injection.module.ComponentAActivityModule;
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryActivity;
+import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoMusicPlayActivity;
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
 
@@ -29,4 +30,6 @@ public interface ComponentAActivityComponent {
     void inject(MonoCategoryActivity monoCategoryActivity);
 
     void inject(MonoTabActivity monoTabActivity);
+
+    void inject(MonoMusicPlayActivity monoMusicPlayActivity);
 }

@@ -122,6 +122,7 @@ public class X5WebViewFragment extends BaseFragment {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+                titleTv.setText(view.getTitle());
                 switchProgressDialog(false);
             }
         });

@@ -3,8 +3,6 @@ package testcomponent.heyongrui.com.componenta.musicservice;
 import android.media.MediaPlayer;
 import android.os.Binder;
 
-import com.billy.cc.core.component.CC;
-
 import java.io.IOException;
 
 /**
@@ -13,23 +11,12 @@ import java.io.IOException;
 
 public class MusicBinder extends Binder implements MusicOperation {
 
+    private MusicService musicService;
     private MediaPlayer mediaPlayer;
-    private int playStatus;//播放状态 0-未开始 1-播放中 2-暂停 3-停止
 
-    public MusicBinder(MediaPlayer mediaPlayer) {
+    public MusicBinder(MediaPlayer mediaPlayer, MusicService musicService) {
         this.mediaPlayer = mediaPlayer;
-        this.mediaPlayer.setOnPreparedListener(mp -> {
-            mp.start();
-        });
-        this.mediaPlayer.setOnCompletionListener(mediaPlayer1 -> {
-            int duration = mediaPlayer1.getDuration();
-            CC.obtainBuilder("MusicIDynamicComponent")
-                    .setActionName("musicStatusChangedObserver")
-                    .addParam("currentPosition", duration)
-                    .addParam("duration", duration)
-                    .build()
-                    .callAsync();
-        });
+        this.musicService = musicService;
     }
 
     @Override
@@ -39,7 +26,9 @@ public class MusicBinder extends Binder implements MusicOperation {
             mediaPlayer.reset();
             mediaPlayer.setDataSource(url);
             mediaPlayer.prepareAsync();//网络视频，异步
-            playStatus = 1;
+            if (musicService != null) {
+                musicService.setPlayStatus(1);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -49,11 +38,15 @@ public class MusicBinder extends Binder implements MusicOperation {
     public void play() {//播放
         if (mediaPlayer == null) return;
         if (!mediaPlayer.isPlaying()) {
-            if (playStatus == 3) {//停止播放后，再次播放需prepareAsync
-                mediaPlayer.prepareAsync();
+            if (musicService != null) {
+                if (musicService.getPlayStatus() == 3) {//停止播放后，再次播放需prepareAsync
+                    mediaPlayer.prepareAsync();
+                }
             }
             mediaPlayer.start();
-            playStatus = 1;
+            if (musicService != null) {
+                musicService.setPlayStatus(1);
+            }
         }
     }
 
@@ -62,7 +55,9 @@ public class MusicBinder extends Binder implements MusicOperation {
         if (mediaPlayer == null) return;
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
-            playStatus = 2;
+            if (musicService != null) {
+                musicService.setPlayStatus(2);
+            }
         }
     }
 
@@ -71,7 +66,9 @@ public class MusicBinder extends Binder implements MusicOperation {
     public void stop() {//停止播放
         if (mediaPlayer == null) return;
         mediaPlayer.stop();
-        playStatus = 3;
+        if (musicService != null) {
+            musicService.setPlayStatus(3);
+        }
     }
 
     @Override
@@ -91,10 +88,26 @@ public class MusicBinder extends Binder implements MusicOperation {
     @Override
     public int getDuration() {
         if (mediaPlayer == null) return 0;
+        if (mediaPlayer.isPlaying()) {
+            if (musicService != null) {
+                musicService.setPlayStatus(1);
+            }
+        }
         return mediaPlayer.getDuration();
     }
 
     public int getPlayStatus() {
-        return playStatus;
+        if (musicService == null) return 0;
+        return musicService.getPlayStatus();
+    }
+
+    public int getPlayItemPosition() {
+        if (musicService == null) return 0;
+        return musicService.getPlayItemPosition();
+    }
+
+    public void setPlayItemPosition(int playItemPosition) {
+        if (musicService == null) return;
+        musicService.setPlayItemPosition(playItemPosition);
     }
 }

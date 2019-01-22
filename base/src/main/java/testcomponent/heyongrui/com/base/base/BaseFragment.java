@@ -92,6 +92,14 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
+    protected void addOnLongClickListeners(View.OnLongClickListener onClickListener, @IdRes int... ids) {
+        if (ids != null) {
+            for (@IdRes int id : ids) {
+                mView.findViewById(id).setOnLongClickListener(onClickListener);
+            }
+        }
+    }
+
     protected void launchActivity(Class<?> clazz) {
         Intent intent = new Intent(getContext(), clazz);
         startActivity(intent);

@@ -41,17 +41,6 @@
         <attr name="coasterColor" format="color|reference"></attr>
         <attr name="vaporColor" format="color|reference"></attr>
     </declare-styleable>
-    <!--Dialog加载框-->
-    <style name="Dialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:backgroundDimAmount">0.6</item>
-    </style>
     <!--圆形加载进度-->
     <declare-styleable name="CircleProgressView">
         <attr name="cpv_progressNormalColor" format="color" />

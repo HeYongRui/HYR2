@@ -58,7 +58,7 @@ import java.lang.ref.WeakReference;
  * Created by lambert on 2018/10/30.
  */
 
-public class SpanUtils {
+public class SpanUtil {
     private static final int COLOR_DEFAULT = 0xFEFFFFFF;
 
     public static final int ALIGN_BOTTOM = 0;
@@ -130,7 +130,7 @@ public class SpanUtils {
     private final int mTypeSpace = 2;
 
 
-    public SpanUtils(Context context) {
+    public SpanUtil(Context context) {
         mContext = context;
         mBuilder = new SpannableStringBuilder();
         mText = "";
@@ -185,7 +185,7 @@ public class SpanUtils {
      *             </ul>
      * @return the single {@link com.blankj.utilcode.util.SpanUtils} instance
      */
-    public SpanUtils setFlag(final int flag) {
+    public SpanUtil setFlag(final int flag) {
         this.flag = flag;
         return this;
     }
@@ -194,9 +194,9 @@ public class SpanUtils {
      * Set the span of foreground's color.
      *
      * @param color The color of foreground
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setForegroundColor(@ColorInt final int color) {
+    public SpanUtil setForegroundColor(@ColorInt final int color) {
         this.foregroundColor = color;
         return this;
     }
@@ -205,9 +205,9 @@ public class SpanUtils {
      * Set the span of background's color.
      *
      * @param color The color of background
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setBackgroundColor(@ColorInt final int color) {
+    public SpanUtil setBackgroundColor(@ColorInt final int color) {
         this.backgroundColor = color;
         return this;
     }
@@ -216,9 +216,9 @@ public class SpanUtils {
      * Set the span of line height.
      *
      * @param lineHeight The line height, in pixel.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setLineHeight(@IntRange(from = 0) final int lineHeight) {
+    public SpanUtil setLineHeight(@IntRange(from = 0) final int lineHeight) {
         return setLineHeight(lineHeight, ALIGN_CENTER);
     }
 
@@ -228,14 +228,14 @@ public class SpanUtils {
      * @param lineHeight The line height, in pixel.
      * @param align      The alignment.
      *                   <ul>
-     *                   <li>{@link SpanUtils.Align#ALIGN_TOP   }</li>
-     *                   <li>{@link SpanUtils.Align#ALIGN_CENTER}</li>
-     *                   <li>{@link SpanUtils.Align#ALIGN_BOTTOM}</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_TOP   }</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_CENTER}</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_BOTTOM}</li>
      *                   </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setLineHeight(@IntRange(from = 0) final int lineHeight,
-                                   @SpanUtils.Align final int align) {
+    public SpanUtil setLineHeight(@IntRange(from = 0) final int lineHeight,
+                                  @SpanUtil.Align final int align) {
         this.lineHeight = lineHeight;
         this.alignLine = align;
         return this;
@@ -245,9 +245,9 @@ public class SpanUtils {
      * Set the span of quote's color.
      *
      * @param color The color of quote
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setQuoteColor(@ColorInt final int color) {
+    public SpanUtil setQuoteColor(@ColorInt final int color) {
         return setQuoteColor(color, 2, 2);
     }
 
@@ -257,11 +257,11 @@ public class SpanUtils {
      * @param color       The color of quote.
      * @param stripeWidth The width of stripe, in pixel.
      * @param gapWidth    The width of gap, in pixel.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setQuoteColor(@ColorInt final int color,
-                                   @IntRange(from = 1) final int stripeWidth,
-                                   @IntRange(from = 0) final int gapWidth) {
+    public SpanUtil setQuoteColor(@ColorInt final int color,
+                                  @IntRange(from = 1) final int stripeWidth,
+                                  @IntRange(from = 0) final int gapWidth) {
         this.quoteColor = color;
         this.stripeWidth = stripeWidth;
         this.quoteGapWidth = gapWidth;
@@ -273,10 +273,10 @@ public class SpanUtils {
      *
      * @param first The indent for the first line of the paragraph.
      * @param rest  The indent for the remaining lines of the paragraph.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setLeadingMargin(@IntRange(from = 0) final int first,
-                                      @IntRange(from = 0) final int rest) {
+    public SpanUtil setLeadingMargin(@IntRange(from = 0) final int first,
+                                     @IntRange(from = 0) final int rest) {
         this.first = first;
         this.rest = rest;
         return this;
@@ -286,9 +286,9 @@ public class SpanUtils {
      * Set the span of bullet.
      *
      * @param gapWidth The width of gap, in pixel.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setBullet(@IntRange(from = 0) final int gapWidth) {
+    public SpanUtil setBullet(@IntRange(from = 0) final int gapWidth) {
         return setBullet(0, 3, gapWidth);
     }
 
@@ -298,11 +298,11 @@ public class SpanUtils {
      * @param color    The color of bullet.
      * @param radius   The radius of bullet, in pixel.
      * @param gapWidth The width of gap, in pixel.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setBullet(@ColorInt final int color,
-                               @IntRange(from = 0) final int radius,
-                               @IntRange(from = 0) final int gapWidth) {
+    public SpanUtil setBullet(@ColorInt final int color,
+                              @IntRange(from = 0) final int radius,
+                              @IntRange(from = 0) final int gapWidth) {
         this.bulletColor = color;
         this.bulletRadius = radius;
         this.bulletGapWidth = gapWidth;
@@ -313,9 +313,9 @@ public class SpanUtils {
      * Set the span of font's size.
      *
      * @param size The size of font.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setFontSize(@IntRange(from = 0) final int size) {
+    public SpanUtil setFontSize(@IntRange(from = 0) final int size) {
         return setFontSize(size, false);
     }
 
@@ -324,9 +324,9 @@ public class SpanUtils {
      *
      * @param size The size of font.
      * @param isSp True to use sp, false to use pixel.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setFontSize(@IntRange(from = 0) final int size, final boolean isSp) {
+    public SpanUtil setFontSize(@IntRange(from = 0) final int size, final boolean isSp) {
         this.fontSize = size;
         this.fontSizeIsDp = isSp;
         return this;
@@ -336,9 +336,9 @@ public class SpanUtils {
      * Set the span of proportion of font.
      *
      * @param proportion The proportion of font.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setFontProportion(final float proportion) {
+    public SpanUtil setFontProportion(final float proportion) {
         this.proportion = proportion;
         return this;
     }
@@ -347,9 +347,9 @@ public class SpanUtils {
      * Set the span of transverse proportion of font.
      *
      * @param proportion The transverse proportion of font.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setFontXProportion(final float proportion) {
+    public SpanUtil setFontXProportion(final float proportion) {
         this.xProportion = proportion;
         return this;
     }
@@ -357,9 +357,9 @@ public class SpanUtils {
     /**
      * Set the span of strikethrough.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setStrikethrough() {
+    public SpanUtil setStrikethrough() {
         this.isStrikethrough = true;
         return this;
     }
@@ -367,9 +367,9 @@ public class SpanUtils {
     /**
      * Set the span of underline.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setUnderline() {
+    public SpanUtil setUnderline() {
         this.isUnderline = true;
         return this;
     }
@@ -377,9 +377,9 @@ public class SpanUtils {
     /**
      * Set the span of superscript.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setSuperscript() {
+    public SpanUtil setSuperscript() {
         this.isSuperscript = true;
         return this;
     }
@@ -387,9 +387,9 @@ public class SpanUtils {
     /**
      * Set the span of subscript.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setSubscript() {
+    public SpanUtil setSubscript() {
         this.isSubscript = true;
         return this;
     }
@@ -397,9 +397,9 @@ public class SpanUtils {
     /**
      * Set the span of bold.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setBold() {
+    public SpanUtil setBold() {
         isBold = true;
         return this;
     }
@@ -407,9 +407,9 @@ public class SpanUtils {
     /**
      * Set the span of italic.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setItalic() {
+    public SpanUtil setItalic() {
         isItalic = true;
         return this;
     }
@@ -417,9 +417,9 @@ public class SpanUtils {
     /**
      * Set the span of bold italic.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setBoldItalic() {
+    public SpanUtil setBoldItalic() {
         isBoldItalic = true;
         return this;
     }
@@ -433,9 +433,9 @@ public class SpanUtils {
      *                   <li>serif</li>
      *                   <li>sans-serif</li>
      *                   </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setFontFamily(@NonNull final String fontFamily) {
+    public SpanUtil setFontFamily(@NonNull final String fontFamily) {
         this.fontFamily = fontFamily;
         return this;
     }
@@ -444,9 +444,9 @@ public class SpanUtils {
      * Set the span of typeface.
      *
      * @param typeface The typeface.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setTypeface(@NonNull final Typeface typeface) {
+    public SpanUtil setTypeface(@NonNull final Typeface typeface) {
         this.typeface = typeface;
         return this;
     }
@@ -460,9 +460,9 @@ public class SpanUtils {
      *                  <li>{@link Layout.Alignment#ALIGN_OPPOSITE}</li>
      *                  <li>{@link Layout.Alignment#ALIGN_CENTER  }</li>
      *                  </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setAlign(@NonNull final Layout.Alignment alignment) {
+    public SpanUtil setAlign(@NonNull final Layout.Alignment alignment) {
         this.alignment = alignment;
         return this;
     }
@@ -472,9 +472,9 @@ public class SpanUtils {
      * <p>Must set {@code view.setMovementMethod(LinkMovementMethod.getInstance())}</p>
      *
      * @param clickSpan The span of click.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setClickSpan(@NonNull final ClickableSpan clickSpan) {
+    public SpanUtil setClickSpan(@NonNull final ClickableSpan clickSpan) {
         this.clickSpan = clickSpan;
         return this;
     }
@@ -484,9 +484,9 @@ public class SpanUtils {
      * <p>Must set {@code view.setMovementMethod(LinkMovementMethod.getInstance())}</p>
      *
      * @param url The url.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setUrl(@NonNull final String url) {
+    public SpanUtil setUrl(@NonNull final String url) {
         this.url = url;
         return this;
     }
@@ -502,10 +502,10 @@ public class SpanUtils {
      *               <li>{@link BlurMaskFilter.Blur#OUTER}</li>
      *               <li>{@link BlurMaskFilter.Blur#INNER}</li>
      *               </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setBlur(@FloatRange(from = 0, fromInclusive = false) final float radius,
-                             final BlurMaskFilter.Blur style) {
+    public SpanUtil setBlur(@FloatRange(from = 0, fromInclusive = false) final float radius,
+                            final BlurMaskFilter.Blur style) {
         this.blurRadius = radius;
         this.style = style;
         return this;
@@ -515,9 +515,9 @@ public class SpanUtils {
      * Set the span of shader.
      *
      * @param shader The shader.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setShader(@NonNull final Shader shader) {
+    public SpanUtil setShader(@NonNull final Shader shader) {
         this.shader = shader;
         return this;
     }
@@ -529,12 +529,12 @@ public class SpanUtils {
      * @param dx          X-axis offset, in pixel.
      * @param dy          Y-axis offset, in pixel.
      * @param shadowColor The color of shadow.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setShadow(@FloatRange(from = 0, fromInclusive = false) final float radius,
-                               final float dx,
-                               final float dy,
-                               final int shadowColor) {
+    public SpanUtil setShadow(@FloatRange(from = 0, fromInclusive = false) final float radius,
+                              final float dx,
+                              final float dy,
+                              final int shadowColor) {
         this.shadowRadius = radius;
         this.shadowDx = dx;
         this.shadowDy = dy;
@@ -547,9 +547,9 @@ public class SpanUtils {
      * Set the spans.
      *
      * @param spans The spans.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils setSpans(@NonNull final Object... spans) {
+    public SpanUtil setSpans(@NonNull final Object... spans) {
         if (spans.length > 0) {
             this.spans = spans;
         }
@@ -560,9 +560,9 @@ public class SpanUtils {
      * Append the text text.
      *
      * @param text The text.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils append(@NonNull final CharSequence text) {
+    public SpanUtil append(@NonNull final CharSequence text) {
         apply(mTypeCharSequence);
         mText = text;
         return this;
@@ -571,9 +571,9 @@ public class SpanUtils {
     /**
      * Append one line.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendLine() {
+    public SpanUtil appendLine() {
         apply(mTypeCharSequence);
         mText = LINE_SEPARATOR;
         return this;
@@ -582,9 +582,9 @@ public class SpanUtils {
     /**
      * Append text and one line.
      *
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendLine(@NonNull final CharSequence text) {
+    public SpanUtil appendLine(@NonNull final CharSequence text) {
         apply(mTypeCharSequence);
         mText = text + LINE_SEPARATOR;
         return this;
@@ -594,9 +594,9 @@ public class SpanUtils {
      * Append one image.
      *
      * @param bitmap The bitmap of image.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@NonNull final Bitmap bitmap) {
+    public SpanUtil appendImage(@NonNull final Bitmap bitmap) {
         return appendImage(bitmap, ALIGN_BOTTOM);
     }
 
@@ -606,14 +606,14 @@ public class SpanUtils {
      * @param bitmap The bitmap.
      * @param align  The alignment.
      *               <ul>
-     *               <li>{@link SpanUtils.Align#ALIGN_TOP     }</li>
-     *               <li>{@link SpanUtils.Align#ALIGN_CENTER  }</li>
-     *               <li>{@link SpanUtils.Align#ALIGN_BASELINE}</li>
-     *               <li>{@link SpanUtils.Align#ALIGN_BOTTOM  }</li>
+     *               <li>{@link SpanUtil.Align#ALIGN_TOP     }</li>
+     *               <li>{@link SpanUtil.Align#ALIGN_CENTER  }</li>
+     *               <li>{@link SpanUtil.Align#ALIGN_BASELINE}</li>
+     *               <li>{@link SpanUtil.Align#ALIGN_BOTTOM  }</li>
      *               </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@NonNull final Bitmap bitmap, @SpanUtils.Align final int align) {
+    public SpanUtil appendImage(@NonNull final Bitmap bitmap, @SpanUtil.Align final int align) {
         apply(mTypeImage);
         this.imageBitmap = bitmap;
         this.alignImage = align;
@@ -624,9 +624,9 @@ public class SpanUtils {
      * Append one image.
      *
      * @param drawable The drawable of image.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@NonNull final Drawable drawable) {
+    public SpanUtil appendImage(@NonNull final Drawable drawable) {
         return appendImage(drawable, ALIGN_BOTTOM);
     }
 
@@ -636,14 +636,14 @@ public class SpanUtils {
      * @param drawable The drawable of image.
      * @param align    The alignment.
      *                 <ul>
-     *                 <li>{@link SpanUtils.Align#ALIGN_TOP     }</li>
-     *                 <li>{@link SpanUtils.Align#ALIGN_CENTER  }</li>
-     *                 <li>{@link SpanUtils.Align#ALIGN_BASELINE}</li>
-     *                 <li>{@link SpanUtils.Align#ALIGN_BOTTOM  }</li>
+     *                 <li>{@link SpanUtil.Align#ALIGN_TOP     }</li>
+     *                 <li>{@link SpanUtil.Align#ALIGN_CENTER  }</li>
+     *                 <li>{@link SpanUtil.Align#ALIGN_BASELINE}</li>
+     *                 <li>{@link SpanUtil.Align#ALIGN_BOTTOM  }</li>
      *                 </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@NonNull final Drawable drawable, @SpanUtils.Align final int align) {
+    public SpanUtil appendImage(@NonNull final Drawable drawable, @SpanUtil.Align final int align) {
         apply(mTypeImage);
         this.imageDrawable = drawable;
         this.alignImage = align;
@@ -654,9 +654,9 @@ public class SpanUtils {
      * Append one image.
      *
      * @param uri The uri of image.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@NonNull final Uri uri) {
+    public SpanUtil appendImage(@NonNull final Uri uri) {
         return appendImage(uri, ALIGN_BOTTOM);
     }
 
@@ -666,14 +666,14 @@ public class SpanUtils {
      * @param uri   The uri of image.
      * @param align The alignment.
      *              <ul>
-     *              <li>{@link SpanUtils.Align#ALIGN_TOP     }</li>
-     *              <li>{@link SpanUtils.Align#ALIGN_CENTER  }</li>
-     *              <li>{@link SpanUtils.Align#ALIGN_BASELINE}</li>
-     *              <li>{@link SpanUtils.Align#ALIGN_BOTTOM  }</li>
+     *              <li>{@link SpanUtil.Align#ALIGN_TOP     }</li>
+     *              <li>{@link SpanUtil.Align#ALIGN_CENTER  }</li>
+     *              <li>{@link SpanUtil.Align#ALIGN_BASELINE}</li>
+     *              <li>{@link SpanUtil.Align#ALIGN_BOTTOM  }</li>
      *              </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@NonNull final Uri uri, @SpanUtils.Align final int align) {
+    public SpanUtil appendImage(@NonNull final Uri uri, @SpanUtil.Align final int align) {
         apply(mTypeImage);
         this.imageUri = uri;
         this.alignImage = align;
@@ -684,9 +684,9 @@ public class SpanUtils {
      * Append one image.
      *
      * @param resourceId The resource id of image.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@DrawableRes final int resourceId) {
+    public SpanUtil appendImage(@DrawableRes final int resourceId) {
         return appendImage(resourceId, ALIGN_BOTTOM);
     }
 
@@ -696,14 +696,14 @@ public class SpanUtils {
      * @param resourceId The resource id of image.
      * @param align      The alignment.
      *                   <ul>
-     *                   <li>{@link SpanUtils.Align#ALIGN_TOP     }</li>
-     *                   <li>{@link SpanUtils.Align#ALIGN_CENTER  }</li>
-     *                   <li>{@link SpanUtils.Align#ALIGN_BASELINE}</li>
-     *                   <li>{@link SpanUtils.Align#ALIGN_BOTTOM  }</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_TOP     }</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_CENTER  }</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_BASELINE}</li>
+     *                   <li>{@link SpanUtil.Align#ALIGN_BOTTOM  }</li>
      *                   </ul>
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendImage(@DrawableRes final int resourceId, @SpanUtils.Align final int align) {
+    public SpanUtil appendImage(@DrawableRes final int resourceId, @SpanUtil.Align final int align) {
         append(Character.toString((char) 0));// it's important for span start with image
         apply(mTypeImage);
         this.imageResourceId = resourceId;
@@ -715,9 +715,9 @@ public class SpanUtils {
      * Append space.
      *
      * @param size The size of space.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendSpace(@IntRange(from = 0) final int size) {
+    public SpanUtil appendSpace(@IntRange(from = 0) final int size) {
         return appendSpace(size, Color.TRANSPARENT);
     }
 
@@ -726,9 +726,9 @@ public class SpanUtils {
      *
      * @param size  The size of space.
      * @param color The color of space.
-     * @return the single {@link SpanUtils} instance
+     * @return the single {@link SpanUtil} instance
      */
-    public SpanUtils appendSpace(@IntRange(from = 0) final int size, @ColorInt final int color) {
+    public SpanUtil appendSpace(@IntRange(from = 0) final int size, @ColorInt final int color) {
         apply(mTypeSpace);
         spaceSize = size;
         spaceColor = color;
@@ -777,7 +777,7 @@ public class SpanUtils {
         }
         if (quoteColor != COLOR_DEFAULT) {
             mBuilder.setSpan(
-                    new SpanUtils.CustomQuoteSpan(quoteColor, stripeWidth, quoteGapWidth),
+                    new SpanUtil.CustomQuoteSpan(quoteColor, stripeWidth, quoteGapWidth),
                     start,
                     end,
                     flag
@@ -785,7 +785,7 @@ public class SpanUtils {
         }
         if (bulletColor != COLOR_DEFAULT) {
             mBuilder.setSpan(
-                    new SpanUtils.CustomBulletSpan(bulletColor, bulletRadius, bulletGapWidth),
+                    new SpanUtil.CustomBulletSpan(bulletColor, bulletRadius, bulletGapWidth),
                     start,
                     end,
                     flag
@@ -801,7 +801,7 @@ public class SpanUtils {
             mBuilder.setSpan(new ScaleXSpan(xProportion), start, end, flag);
         }
         if (lineHeight != -1) {
-            mBuilder.setSpan(new SpanUtils.CustomLineHeightSpan(lineHeight, alignLine), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.CustomLineHeightSpan(lineHeight, alignLine), start, end, flag);
         }
         if (isStrikethrough) {
             mBuilder.setSpan(new StrikethroughSpan(), start, end, flag);
@@ -828,7 +828,7 @@ public class SpanUtils {
             mBuilder.setSpan(new TypefaceSpan(fontFamily), start, end, flag);
         }
         if (typeface != null) {
-            mBuilder.setSpan(new SpanUtils.CustomTypefaceSpan(typeface), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.CustomTypefaceSpan(typeface), start, end, flag);
         }
         if (alignment != null) {
             mBuilder.setSpan(new AlignmentSpan.Standard(alignment), start, end, flag);
@@ -848,11 +848,11 @@ public class SpanUtils {
             );
         }
         if (shader != null) {
-            mBuilder.setSpan(new SpanUtils.ShaderSpan(shader), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.ShaderSpan(shader), start, end, flag);
         }
         if (shadowRadius != -1) {
             mBuilder.setSpan(
-                    new SpanUtils.ShadowSpan(shadowRadius, shadowDx, shadowDy, shadowColor),
+                    new SpanUtil.ShadowSpan(shadowRadius, shadowDx, shadowDy, shadowColor),
                     start,
                     end,
                     flag
@@ -870,13 +870,13 @@ public class SpanUtils {
         mBuilder.append("<img>");
         int end = start + 5;
         if (imageBitmap != null) {
-            mBuilder.setSpan(new SpanUtils.CustomImageSpan(imageBitmap, alignImage), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.CustomImageSpan(imageBitmap, alignImage), start, end, flag);
         } else if (imageDrawable != null) {
-            mBuilder.setSpan(new SpanUtils.CustomImageSpan(imageDrawable, alignImage), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.CustomImageSpan(imageDrawable, alignImage), start, end, flag);
         } else if (imageUri != null) {
-            mBuilder.setSpan(new SpanUtils.CustomImageSpan(imageUri, alignImage), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.CustomImageSpan(imageUri, alignImage), start, end, flag);
         } else if (imageResourceId != -1) {
-            mBuilder.setSpan(new SpanUtils.CustomImageSpan(imageResourceId, alignImage), start, end, flag);
+            mBuilder.setSpan(new SpanUtil.CustomImageSpan(imageResourceId, alignImage), start, end, flag);
         }
     }
 
@@ -884,7 +884,7 @@ public class SpanUtils {
         int start = mBuilder.length();
         mBuilder.append("< >");
         int end = start + 3;
-        mBuilder.setSpan(new SpanUtils.SpaceSpan(spaceSize, spaceColor), start, end, flag);
+        mBuilder.setSpan(new SpanUtil.SpaceSpan(spaceSize, spaceColor), start, end, flag);
     }
 
     class CustomLineHeightSpan extends CharacterStyle
@@ -1103,7 +1103,7 @@ public class SpanUtils {
         }
     }
 
-    class CustomImageSpan extends SpanUtils.CustomDynamicDrawableSpan {
+    class CustomImageSpan extends SpanUtil.CustomDynamicDrawableSpan {
         private Drawable mDrawable;
         private Uri mContentUri;
         private int mResourceId;

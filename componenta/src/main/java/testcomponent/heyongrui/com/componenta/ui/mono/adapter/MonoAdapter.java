@@ -1,15 +1,12 @@
 package testcomponent.heyongrui.com.componenta.ui.mono.adapter;
 
-import android.graphics.drawable.ClipDrawable;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -216,6 +213,7 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
                 TextView musicCategoryTv = helper.getView(R.id.category_tv);
                 ImageView musicThumbIv = helper.getView(R.id.thumb_iv);
                 ProgressBar musicProgressbar = helper.getView(R.id.progressbar);
+                UiUtil.setProgressBarColors(musicProgressbar, ContextCompat.getColor(mContext, R.color.translucentBlack), Color.parseColor("#9C9EC7F5"));
                 musicProgressbar.setMax(100);
                 musicProgressbar.setProgress(0);
                 ImageView musicPlayIv = helper.getView(R.id.play_iv);
@@ -260,21 +258,6 @@ public class MonoAdapter extends BaseMultiItemQuickAdapter<MonoMultipleItem, Bas
                 }
                 break;
         }
-    }
-
-    public void setColors(ProgressBar progressBar, int backgroundColor, int progressColor) {
-        //Background
-        ClipDrawable bgClipDrawable = new ClipDrawable(new ColorDrawable(backgroundColor), Gravity.LEFT, ClipDrawable.HORIZONTAL);
-        bgClipDrawable.setLevel(10000);
-        //Progress
-        ClipDrawable progressClip = new ClipDrawable(new ColorDrawable(progressColor), Gravity.LEFT, ClipDrawable.HORIZONTAL);
-        //Setup LayerDrawable and assign to progressBar
-        Drawable[] progressDrawables = {bgClipDrawable, progressClip/*second*/, progressClip};
-        LayerDrawable progressLayerDrawable = new LayerDrawable(progressDrawables);
-        progressLayerDrawable.setId(0, android.R.id.background);
-        progressLayerDrawable.setId(1, android.R.id.secondaryProgress);
-        progressLayerDrawable.setId(2, android.R.id.progress);
-        progressBar.setProgressDrawable(progressLayerDrawable);
     }
 
     public void setNineGridItemClickListener(ItemImageClickListener<MonoTeaDto.EntityListBean.MeowBean.ThumbBean> itemImageViewClickListener) {

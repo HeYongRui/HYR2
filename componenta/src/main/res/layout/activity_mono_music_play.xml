@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/bg_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_8"
+            android:scaleType="centerInside"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="播放器"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/divide"
+        android:layout_width="0dp"
+        android:layout_height="0.1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/turntable_bg_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/turntable_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/turntable_iv"
+        app:layout_constraintEnd_toEndOf="@+id/turntable_iv"
+        app:layout_constraintStart_toStartOf="@+id/turntable_iv"
+        app:layout_constraintTop_toTopOf="@+id/turntable_iv" />
+
+    <ImageView
+        android:id="@+id/turntable_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_60"
+        android:src="@drawable/turntable_bg_anim_highlight"
+        app:layout_constraintBottom_toBottomOf="@+id/stylus_pole_iv"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/stylus_pole_iv"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/album_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/default_album"
+        app:layout_constraintBottom_toBottomOf="@+id/turntable_iv"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/turntable_iv"
+        app:layout_constraintStart_toStartOf="@+id/turntable_iv"
+        app:layout_constraintTop_toTopOf="@+id/turntable_iv"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <ImageView
+        android:id="@+id/stylus_pole_iv"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginTop="2dp"
+        android:rotation="-60"
+        android:src="@drawable/stylus_pole"
+        android:transformPivotX="20dp"
+        android:transformPivotY="0dp"
+        app:layout_constraintDimensionRatio="0.32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+    <ImageView
+        android:id="@+id/stylus_point_iv"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="0dp"
+        android:src="@drawable/stylus_point"
+        app:layout_constraintDimensionRatio="1.9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+    <android.support.constraint.Group
+        android:id="@+id/phonograph_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="turntable_bg_iv,turntable_iv,album_iv,stylus_pole_iv,stylus_point_iv" />
+
+    <ScrollView
+        android:id="@+id/lyric_scl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:clipChildren="true"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/play_time_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divide"
+        app:layout_constraintWidth_percent="0.7"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/lyric_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            tools:text="我是歌词" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/play_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toTopOf="@+id/play_iv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="@+id/play_time_tv"
+        app:layout_constraintEnd_toStartOf="@+id/total_time_tv"
+        app:layout_constraintStart_toEndOf="@+id/play_time_tv"
+        app:layout_constraintTop_toTopOf="@+id/play_time_tv"
+        tools:heightPercent="50" />
+
+    <TextView
+        android:id="@+id/total_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="03:25"
+        android:textColor="@color/colorTextHint"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBaseline_toBaselineOf="@+id/play_time_tv"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/backward_iv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:padding="@dimen/dp_4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backward"
+        app:layout_constraintBottom_toBottomOf="@+id/play_iv"
+        app:layout_constraintEnd_toStartOf="@+id/play_iv"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_iv" />
+
+    <ImageView
+        android:id="@+id/play_iv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:padding="@dimen/dp_4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/forward_iv"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/backward_iv" />
+
+    <ImageView
+        android:id="@+id/forward_iv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:padding="@dimen/dp_4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/forward"
+        app:layout_constraintBottom_toBottomOf="@+id/play_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/play_iv"
+        app:layout_constraintTop_toTopOf="@+id/play_iv" />
+
+</android.support.constraint.ConstraintLayout>

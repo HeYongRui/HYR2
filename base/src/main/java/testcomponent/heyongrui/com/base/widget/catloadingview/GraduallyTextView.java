@@ -30,24 +30,20 @@ public class GraduallyTextView extends android.support.v7.widget.AppCompatEditTe
 
     private ValueAnimator valueAnimator;
 
-
     public GraduallyTextView(Context context) {
         super(context);
         init();
     }
-
 
     public GraduallyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-
     public GraduallyTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
-
 
     public void init() {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -62,16 +58,11 @@ public class GraduallyTextView extends android.support.v7.widget.AppCompatEditTe
         valueAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         valueAnimator.setRepeatCount(Animation.INFINITE);
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
-        valueAnimator.addUpdateListener(
-                new ValueAnimator.AnimatorUpdateListener() {
-                    @Override
-                    public void onAnimationUpdate(ValueAnimator animation) {
-                        progress = (Float) animation.getAnimatedValue();
-                        GraduallyTextView.this.invalidate();
-                    }
-                });
+        valueAnimator.addUpdateListener(animation -> {
+            progress = (Float) animation.getAnimatedValue();
+            invalidate();
+        });
     }
-
 
     public void startLoading() {
         if (!isStop) {
@@ -96,7 +87,6 @@ public class GraduallyTextView extends android.support.v7.widget.AppCompatEditTe
         sigleDuration = 100f / textLength;
     }
 
-
     public void stopLoading() {
         isLoading = false;
         valueAnimator.end();
@@ -105,11 +95,9 @@ public class GraduallyTextView extends android.support.v7.widget.AppCompatEditTe
         setText(text);
     }
 
-
     public void setDuration(int duration) {
         this.duration = duration;
     }
-
 
     @Override
     protected void onVisibilityChanged(View changedView, int visibility) {
@@ -125,7 +113,6 @@ public class GraduallyTextView extends android.support.v7.widget.AppCompatEditTe
             }
         }
     }
-
 
     @Override
     protected void onDraw(Canvas canvas) {
