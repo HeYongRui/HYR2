@@ -274,8 +274,7 @@ public class MonoTabActivity extends BaseActivity {
                 }
             };
         }
-        IntentFilter filter = new IntentFilter(
-                "testcomponent.heyongrui.com.componenta.musicservice");
+        IntentFilter filter = new IntentFilter("testcomponent.heyongrui.com.componenta.musicservice");
         registerReceiver(mReceiver, filter);
     }
 
