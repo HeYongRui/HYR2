@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="testcomponent.heyongrui.com.componenta.ui.H5Activity">
+    tools:context="testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangCategoriesActivity">
 
-    <FrameLayout
-        android:id="@+id/x5webview_content_fragment"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categories_rcl"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 </android.support.constraint.ConstraintLayout>

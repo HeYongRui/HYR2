@@ -125,6 +125,7 @@ public class MonoTabActivity extends BaseActivity {
                 refreshlayout.finishRefresh();
                 if (mIsLastPage) {
                     refreshlayout.setLoadmoreFinished(true);
+                    smartRefreshLayout.finishLoadmore();
                 } else {
                     getMusicTab(false);
                 }

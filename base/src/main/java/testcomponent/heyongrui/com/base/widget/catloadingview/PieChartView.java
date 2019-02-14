@@ -131,8 +131,8 @@ public class PieChartView extends View {
                 mPiePaint.setColor(getResources().getColor(mPieDataList.get(i).getColorId()));
                 //绘制弧形区域，以构成饼状图
                 float pieSweep = mPieDataList.get(i).getValue() * 360;
-                canvas.drawArc(mRectF, pieStart, mPieSweep[i], true, mPiePaint);
-                canvas.drawArc(mRectF, pieStart, mPieSweep[i], true, mOuterLinePaint);
+//                canvas.drawArc(mRectF, pieStart, mPieSweep[i], true, mPiePaint);
+//                canvas.drawArc(mRectF, pieStart, mPieSweep[i], true, mOuterLinePaint);
                 //获取下一个弧形的起点
                 pieStart += pieSweep;
             }
@@ -141,7 +141,7 @@ public class PieChartView extends View {
             mPiePaint.setColor(Color.parseColor("#dadada"));//灰色
             canvas.drawCircle(mRadius, mRadius, mRadius, mPiePaint);
         }
-        drawInnerCircle(canvas);
+//        drawInnerCircle(canvas);
     }
 
     @Override

@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         editText.addTextChangedListener(new EditTextWithClear(editText, "-".charAt(0)));
         tv = findViewById(R.id.tv);
         iv = findViewById(R.id.iv);
-        addOnClickListeners(this, R.id.tv_ticker, R.id.run_tv, R.id.tv, R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.iv);
+        addOnClickListeners(this, R.id.tv_ticker, R.id.run_tv, R.id.tv, R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.iv);
     }
 
     private String generateChars(Random random, String list, int numDigits) {
@@ -115,6 +115,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn4:
                 CC.obtainBuilder("ComponentA")
                         .setActionName("openMonoTab")
+                        .build()
+                        .call();
+                break;
+            case R.id.btn5:
+                CC.obtainBuilder("ComponentA")
+                        .setActionName("openQingMang")
                         .build()
                         .call();
                 break;

@@ -1,4 +1,4 @@
-package testcomponent.heyongrui.com.componenta.ui.mono.view;
+package testcomponent.heyongrui.com.componenta.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,16 +6,17 @@ import android.os.Bundle;
 
 import testcomponent.heyongrui.com.base.base.BaseActivity;
 import testcomponent.heyongrui.com.componenta.R;
+import testcomponent.heyongrui.com.componenta.ui.mono.view.X5WebViewFragment;
 
 /**
  * Created by lambert on 2018/11/5.
  */
 
-public class MonoH5Activity extends BaseActivity {
+public class H5Activity extends BaseActivity {
 
     public static void launchActivity(Context context, String url) {
         Intent intent = new Intent();
-        intent.setClass(context, MonoH5Activity.class);
+        intent.setClass(context, H5Activity.class);
         Bundle bundle = new Bundle();
         bundle.putString("url", url);
         intent.putExtras(bundle);

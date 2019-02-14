@@ -9,6 +9,8 @@ import testcomponent.heyongrui.com.componenta.injection.module.ComponentAActivit
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoCategoryActivity;
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoMusicPlayActivity;
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity;
+import testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangArticleFragment;
+import testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangCategoriesActivity;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
 
 /**
@@ -26,6 +28,10 @@ public interface ComponentAActivityComponent {
     void inject(ComponentActivityA baseActivity);
 
     void inject(UnsplashActivity unsplashActivity);
+
+    void inject(QingMangCategoriesActivity qingMangCategoriesActivity);
+
+    void inject(QingMangArticleFragment qingMangArticleFragment);
 
     void inject(MonoCategoryActivity monoCategoryActivity);
 

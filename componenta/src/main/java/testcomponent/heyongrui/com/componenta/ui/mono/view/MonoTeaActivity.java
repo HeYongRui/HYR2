@@ -30,6 +30,7 @@ import testcomponent.heyongrui.com.base.widget.itemdecoration.RecycleViewItemDec
 import testcomponent.heyongrui.com.componenta.R;
 import testcomponent.heyongrui.com.componenta.net.dto.MonoTeaDto;
 import testcomponent.heyongrui.com.componenta.net.service.MonoSerevice;
+import testcomponent.heyongrui.com.componenta.ui.H5Activity;
 import testcomponent.heyongrui.com.componenta.ui.mono.adapter.MonoAdapter;
 import testcomponent.heyongrui.com.componenta.ui.mono.adapter.MonoMultipleItem;
 import testcomponent.heyongrui.com.componenta.widget.imagewatcher.ImageWatcher;
@@ -116,7 +117,7 @@ public class MonoTeaActivity extends BaseActivity {
             if (meow == null) return;
             String rec_url = meow.getRec_url();
             if (TextUtils.isEmpty(rec_url)) return;
-            MonoH5Activity.launchActivity(this, rec_url);
+            H5Activity.launchActivity(this, rec_url);
         });
         monoAdapter.setOnItemChildClickListener((adapter, view, position) -> {
             if (view.getId() == R.id.category_tv) {

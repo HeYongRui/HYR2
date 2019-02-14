@@ -32,4 +32,10 @@
         <item name="android:taskToBackExitAnimation">@anim/slide_down_out</item>
     </style>
 
+    <style name="CustomTabLayoutStyle" parent="@style/TextAppearance.AppCompat.Widget.Switch">
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
 </resources>

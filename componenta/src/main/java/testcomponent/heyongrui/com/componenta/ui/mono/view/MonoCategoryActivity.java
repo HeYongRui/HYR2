@@ -111,6 +111,7 @@ public class MonoCategoryActivity extends BaseActivity {
                 refreshlayout.finishRefresh();
                 if (mIsLastPage) {
                     refreshlayout.setLoadmoreFinished(true);
+                    smartRefreshLayout.finishLoadmore();
                 } else {
                     getCategory(false);
                 }

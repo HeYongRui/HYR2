@@ -1,9 +1,13 @@
 package testcomponent.heyongrui.com.componenta.net.api;
 
+import java.util.Map;
+
 import io.reactivex.Observable;
-import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
+import testcomponent.heyongrui.com.componenta.net.dto.QingMangArticleListDto;
+import testcomponent.heyongrui.com.componenta.net.dto.QingMangCategoriesDto;
 
 /**
  * Created by lambert on 2018/11/2.
@@ -11,8 +15,9 @@ import retrofit2.http.Query;
 
 public interface QingMangApi {
 
-    @GET("v2/apps/box.proto")
-    Observable<ResponseBody> getQingMang(@Query("v") String version,
-                                         @Query("udid") String udid,
-                                         @Query("vc") int vc);
+    @GET("category.list")
+    Observable<QingMangCategoriesDto> getQingMangCategories(@Query("token") String token);
+
+    @GET("article.list")
+    Observable<QingMangArticleListDto> getQingMangArticleList(@QueryMap Map<String, String> fields);
 }

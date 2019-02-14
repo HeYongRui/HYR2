@@ -248,7 +248,7 @@ public class StringUtil {
     /**
      * 获取字符串(网址)中参数键值对
      */
-    private static Map<String, String> getParmMap(String url) {
+    public static Map<String, String> getParmMap(String url) {
         //截取?后面的带&的键值对，并解析成Map
         Map<String, String> map = null;
         String[] urlParts = url.split("\\?");

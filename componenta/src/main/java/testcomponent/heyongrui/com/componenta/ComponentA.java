@@ -19,6 +19,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity;
 import testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTeaActivity;
+import testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangArticleActivity;
+import testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangCategoriesActivity;
 import testcomponent.heyongrui.com.componenta.ui.unsplash.view.UnsplashActivity;
 
 /**
@@ -99,6 +101,12 @@ public class ComponentA implements IComponent, IMainThread {
             CC.sendCCResult(cc.getCallId(), CCResult.error("has not support for action:" + cc.getActionName()));
         } else if (TextUtils.equals("openUnsplash", actionName)) {
             CCUtil.navigateTo(cc, UnsplashActivity.class);
+            CC.sendCCResult(cc.getCallId(), CCResult.success());
+        } else if (TextUtils.equals("openQingMang", actionName)) {
+            CCUtil.navigateTo(cc, QingMangCategoriesActivity.class);
+            CC.sendCCResult(cc.getCallId(), CCResult.success());
+        } else if (TextUtils.equals("openQingMangArticle", actionName)) {
+            CCUtil.navigateTo(cc, QingMangArticleActivity.class);
             CC.sendCCResult(cc.getCallId(), CCResult.success());
         } else if (TextUtils.equals("openMonoTea", actionName)) {
             CCUtil.navigateTo(cc, MonoTeaActivity.class);

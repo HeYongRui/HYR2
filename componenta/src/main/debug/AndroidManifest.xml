@@ -24,6 +24,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangCategoriesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/demo_a_AppTheme" />
+        <activity
+            android:name="testcomponent.heyongrui.com.componenta.ui.qingmang.view.QingMangArticleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/demo_a_AppTheme" />
+        <activity
             android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoTabActivity"
             android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
@@ -40,7 +48,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity
-            android:name="testcomponent.heyongrui.com.componenta.ui.mono.view.MonoH5Activity"
+            android:name="testcomponent.heyongrui.com.componenta.ui.H5Activity"
             android:screenOrientation="portrait"
             android:theme="@style/demo_a_AppTheme" />
         <activity

@@ -88,4 +88,32 @@ public class TimeUtil {
             throw new IllegalArgumentException("timeString is Illegal");
         }
     }
+
+    /**
+     * 根据时间戳获取与当前时间的差值
+     */
+    public static String getDistanceTime(long timestamp) {
+        long day = 0;
+        long hour = 0;
+        long min = 0;
+//        long sec = 0;
+        long currentTimeMillis = System.currentTimeMillis();
+        long diff = currentTimeMillis - timestamp;
+        day = Math.abs(diff / (24 * 60 * 60 * 1000));
+        hour = Math.abs((diff / (60 * 60 * 1000) - day * 24));
+        min = Math.abs(((diff / (60 * 1000)) - day * 24 * 60 - hour * 60));
+//        sec = Math.abs((diff / 1000 - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60));
+        if (day == 0) {
+            if (hour == 0) {
+                return min + "分钟" + (diff > 0 ? "前" : "后");
+            } else {
+                return hour + "小时" + (diff > 0 ? "前" : "后");
+            }
+        } else if (day == 1) {
+            return diff > 0 ? "昨天" : "明天";
+        } else {
+            SimpleDateFormat sdf = new SimpleDateFormat(DAY_ONE);
+            return sdf.format(new Date(timestamp));
+        }
+    }
 }

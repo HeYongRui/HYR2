@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.tencent.smtt.export.external.extension.interfaces.IX5WebViewExtension;
+import com.tencent.smtt.sdk.CookieSyncManager;
 import com.tencent.smtt.sdk.WebStorage;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
@@ -183,5 +184,32 @@ public class X5WebViewFragment extends BaseFragment {
                 progressDialog.dismiss();
             }
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        x5WebView.onResume();
+        x5WebView.resumeTimers();
+        CookieSyncManager.createInstance(mContext);
+        CookieSyncManager.getInstance().startSync();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        x5WebView.onPause();
+        //小心这个！！！暂停整个 WebView 所有布局、解析、JS。
+        x5WebView.pauseTimers();
+        CookieSyncManager.getInstance().stopSync();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (x5WebView != null) {
+            x5WebView.removeAllViews();
+            x5WebView.destroy();
+        }
+        super.onDestroy();
     }
 }
